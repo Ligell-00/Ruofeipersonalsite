@@ -504,6 +504,263 @@ body.menu-open {
   height: auto;
 }
 
+.case-section {
+  padding: clamp(4rem, 7vw, 6.5rem) 2rem;
+  background: #fff;
+}
+
+.case-section:nth-of-type(odd) {
+  background: #f7f8fa;
+}
+
+.case-section-header {
+  width: min(960px, 100%);
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.case-section-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-section-header h2 {
+  margin: 0 0 1rem;
+  color: var(--color-fg-bold);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--tracking-tight);
+}
+
+.case-section-header p:last-child {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-fg-light);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+.flow-diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.flow-diagram-card {
+  margin: 0;
+}
+
+.flow-diagram-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  cursor: zoom-in;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.flow-diagram-trigger:hover,
+.flow-diagram-trigger:focus-visible {
+  border-color: color-mix(in srgb, var(--color-accent) 52%, transparent);
+  box-shadow: 0 24px 58px rgba(46, 89, 186, 0.18);
+  transform: translateY(-4px);
+}
+
+.flow-diagram-trigger img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flow-diagram-card figcaption {
+  margin-top: 0.75rem;
+  color: var(--color-fg-light);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.result-grid,
+.feature-grid {
+  display: grid;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.result-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.result-card,
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.result-card {
+  min-height: 245px;
+  padding: 1.35rem;
+}
+
+.result-card::before {
+  content: "const result = {";
+  display: block;
+  margin-bottom: 0.95rem;
+  color: var(--color-fg-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+}
+
+.result-card::after {
+  content: "};";
+  position: absolute;
+  right: 1.35rem;
+  bottom: 1rem;
+  color: var(--color-fg-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+}
+
+.result-index {
+  display: inline-flex;
+  margin-bottom: 0.7rem;
+  color: var(--color-accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.result-card h3,
+.feature-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--color-fg-bold);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.result-card p,
+.feature-card p {
+  margin: 0;
+  color: var(--color-fg-light);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.feature-card {
+  min-height: 235px;
+  padding: 1.5rem;
+}
+
+.feature-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.1rem;
+  border: 1px solid rgba(46, 89, 186, 0.22);
+  border-radius: 50%;
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-black);
+}
+
+.result-card:hover,
+.result-card.is-visible:hover,
+.feature-card:hover,
+.feature-card.is-visible:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 54%, transparent);
+  box-shadow: 0 24px 58px rgba(46, 89, 186, 0.16);
+  transform: translateY(-5px);
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 620ms var(--ease-out),
+    transform 620ms var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4.5rem 2rem 2rem;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox-image {
+  display: block;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+}
+
+.image-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--color-fg-bold);
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+}
+
 .resume-header {
   margin-bottom: 2rem;
   text-align: center;
@@ -815,6 +1072,28 @@ body.menu-open {
   .product-cases-intro .product-cases-intro-summary {
     font-size: 1.08rem;
     line-height: 1.7;
+  }
+
+  .case-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .case-section-header p:last-child {
+    font-size: 1.08rem;
+  }
+
+  .result-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card,
+  .feature-card {
+    min-height: 0;
+  }
+
+  .image-lightbox {
+    padding: 4rem 1rem 1rem;
   }
 
   .resume-summary {

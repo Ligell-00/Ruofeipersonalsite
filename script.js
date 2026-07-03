@@ -10,7 +10,12 @@ const resumeLinks = [...document.querySelectorAll('.resume-nav-link')];
 const trackedSections = [...document.querySelectorAll('main section[id], header[id]')];
 const resumeSections = [...document.querySelectorAll('.resume-content > section[id]')];
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article')];
+const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article, .result-card, .feature-card')];
+const revealItems = [...document.querySelectorAll('.reveal-item')];
+const lightbox = document.querySelector('.image-lightbox');
+const lightboxImage = document.querySelector('.image-lightbox-image');
+const lightboxClose = document.querySelector('.image-lightbox-close');
+const diagramTriggers = [...document.querySelectorAll('.flow-diagram-trigger')];
 
 hoverCards.forEach((card) => {
   card.addEventListener('pointerenter', () => card.classList.add('is-hover'));
@@ -47,6 +52,7 @@ document.addEventListener('pointerdown', (event) => {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
+  if (event.key === 'Escape') closeLightbox();
 });
 
 document.querySelectorAll('.slide-menu a, a[href^="#"]').forEach((link) => {
@@ -114,3 +120,49 @@ function updateActiveLinks() {
 window.addEventListener('scroll', updateActiveLinks, { passive: true });
 window.addEventListener('resize', updateActiveLinks);
 updateActiveLinks();
+
+function openLightbox(src, alt) {
+  if (!lightbox || !lightboxImage) return;
+  lightboxImage.src = src;
+  lightboxImage.alt = alt;
+  lightbox.hidden = false;
+  document.body.classList.add('menu-open');
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage) return;
+  lightbox.hidden = true;
+  lightboxImage.removeAttribute('src');
+  lightboxImage.alt = '';
+  document.body.classList.remove('menu-open');
+}
+
+diagramTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const src = trigger.dataset.lightboxSrc;
+    if (!src) return;
+    openLightbox(src, trigger.dataset.lightboxAlt || '');
+  });
+});
+
+lightboxClose?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 },
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
+}
