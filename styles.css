@@ -473,135 +473,35 @@ body.menu-open {
 }
 
 .product-cases-intro {
-  padding: clamp(4.5rem, 8vw, 7rem) clamp(1.5rem, 6vw, 6rem) clamp(3.5rem, 7vw, 6rem);
+  padding: 3rem 2rem;
   background: #f7f8fa;
   color: #101114;
 }
 
 .product-cases-intro-header {
-  max-width: 1360px;
-  margin: 0 auto clamp(2rem, 4vw, 3.25rem);
+  max-width: 880px;
+  margin: 0 auto 2rem;
 }
 
 .product-cases-intro-title {
-  margin-bottom: clamp(1.6rem, 3.2vw, 2.5rem);
-  color: #07080a;
-  font-size: clamp(4rem, 8.2vw, 8rem);
-  line-height: 0.95;
+  color: var(--color-fg-bold);
 }
 
 .product-cases-intro-summary {
-  max-width: 1180px;
-  color: #25272d;
-  font-size: clamp(1.7rem, 2.85vw, 3rem);
-  font-weight: var(--font-weight-normal);
-  line-height: 1.72;
+  color: var(--color-fg);
   text-align: center;
-}
-
-.product-cases-intro-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  align-items: stretch;
-}
-
-.product-owner-role {
-  padding-top: 0.15rem;
-}
-
-.product-owner-role h2 {
-  margin: 0 0 0.75rem;
-  color: #111827;
-  font-size: clamp(1.35rem, 2vw, 1.75rem);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0;
-  line-height: 1.25;
-}
-
-.product-owner-role ul {
-  display: grid;
-  gap: 0.45rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.product-owner-role li {
-  position: relative;
-  padding-left: 1.55rem;
-  color: #334155;
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  line-height: 1.55;
-}
-
-.product-owner-role li::before {
-  content: "";
-  position: absolute;
-  top: 0.73em;
-  left: 0.15rem;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: #1f8cff;
-  transform: translateY(-50%);
-}
-
-.product-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  align-items: center;
-  align-self: start;
-  min-height: 112px;
-  padding: 1rem 1.25rem;
-  background: #101923;
-  color: #fff;
-}
-
-.product-metric {
-  text-align: center;
-}
-
-.product-metric strong {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: #fff;
-  font-size: clamp(2rem, 3.2vw, 2.85rem);
-  font-weight: var(--font-weight-normal);
-  letter-spacing: 0;
-  line-height: 1;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.75);
-}
-
-.product-metric strong span {
-  color: #18a8ff;
-}
-
-.product-metric p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(0.95rem, 1.35vw, 1.1rem);
-  line-height: 1.4;
 }
 
 .product-cases-hero {
-  display: flex;
-  min-height: calc(100svh - var(--header-height));
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   overflow: hidden;
+  background: #fff;
 }
 
 .product-cases-hero-image {
   display: block;
-  width: min(100vw, calc((100svh - var(--header-height)) * 16 / 9));
-  max-width: 100%;
-  max-height: calc(100svh - var(--header-height));
+  width: 100%;
   height: auto;
-  object-fit: contain;
 }
 
 .resume-header {
@@ -627,19 +527,18 @@ body.menu-open {
 }
 
 .product-cases-intro .product-cases-intro-title {
-  margin-bottom: clamp(1.6rem, 3.2vw, 2.5rem);
-  color: #07080a;
-  font-size: clamp(4rem, 8.2vw, 8rem);
-  letter-spacing: 0;
-  line-height: 0.95;
+  margin-bottom: 1.25rem;
+  color: var(--color-fg-bold);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
 }
 
 .product-cases-intro .product-cases-intro-summary {
-  max-width: 1180px;
-  color: #25272d;
-  font-size: clamp(1.7rem, 2.85vw, 3rem);
-  font-weight: var(--font-weight-normal);
-  line-height: 1.72;
+  max-width: 640px;
+  color: var(--color-fg);
+  font-size: var(--text-lg);
+  line-height: 1.7;
   text-align: center;
 }
 
@@ -913,39 +812,9 @@ body.menu-open {
     margin-bottom: 2rem;
   }
 
-  .product-cases-intro-title {
-    font-size: clamp(3.4rem, 18vw, 5rem);
-  }
-
   .product-cases-intro .product-cases-intro-summary {
-    font-size: clamp(1.35rem, 7vw, 2rem);
-    line-height: 1.65;
-  }
-
-  .product-cases-intro-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-metrics {
-    min-height: 96px;
-    padding: 0.85rem 0.75rem;
-  }
-
-  .product-metric strong {
-    font-size: clamp(1.75rem, 8vw, 2.35rem);
-  }
-
-  .product-metric p {
-    font-size: 0.88rem;
-  }
-
-  .product-cases-hero {
-    min-height: calc(100svh - var(--header-height-mobile));
-  }
-
-  .product-cases-hero-image {
-    width: min(100vw, calc((100svh - var(--header-height-mobile)) * 16 / 9));
-    max-height: calc(100svh - var(--header-height-mobile));
+    font-size: 1.08rem;
+    line-height: 1.7;
   }
 
   .resume-summary {
