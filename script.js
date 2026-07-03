@@ -10,12 +10,13 @@ const resumeLinks = [...document.querySelectorAll('.resume-nav-link')];
 const trackedSections = [...document.querySelectorAll('main section[id], header[id]')];
 const resumeSections = [...document.querySelectorAll('.resume-content > section[id]')];
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article, .result-card, .feature-card')];
+const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article, .feature-card, .project-result-card')];
 const revealItems = [...document.querySelectorAll('.reveal-item')];
 const lightbox = document.querySelector('.image-lightbox');
 const lightboxImage = document.querySelector('.image-lightbox-image');
 const lightboxClose = document.querySelector('.image-lightbox-close');
 const diagramTriggers = [...document.querySelectorAll('.flow-diagram-trigger')];
+const resultCards = [...document.querySelectorAll('.project-result-card')];
 
 hoverCards.forEach((card) => {
   card.addEventListener('pointerenter', () => card.classList.add('is-hover'));
@@ -117,9 +118,27 @@ function updateActiveLinks() {
   });
 }
 
+function updateActiveResultCard() {
+  if (!resultCards.length) return;
+  const anchor = window.innerHeight * 0.42;
+  let activeCard = resultCards[0];
+
+  resultCards.forEach((card) => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top <= anchor) activeCard = card;
+  });
+
+  resultCards.forEach((card) => {
+    card.classList.toggle('is-active', card === activeCard);
+  });
+}
+
 window.addEventListener('scroll', updateActiveLinks, { passive: true });
+window.addEventListener('scroll', updateActiveResultCard, { passive: true });
 window.addEventListener('resize', updateActiveLinks);
+window.addEventListener('resize', updateActiveResultCard);
 updateActiveLinks();
+updateActiveResultCard();
 
 function openLightbox(src, alt) {
   if (!lightbox || !lightboxImage) return;
