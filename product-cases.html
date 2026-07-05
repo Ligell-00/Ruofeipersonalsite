@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>产品案例 | 陈若非</title>
-    <meta name="description" content="陈若非的产品案例：电商 SaaS、交易履约、营销增长和商业化体系。" />
+    <meta name="description" content="陈若非的产品案例：掌中宝交易、掌中宝商品、掌中宝促销、工具吧、多卖宝。" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="portfolio-body">
     <div class="page-container">
       <header class="site-header">
         <a class="site-logo" href="index.html" aria-label="回到简历"><span class="logo-text">CRF</span></a>
@@ -33,116 +33,55 @@
           </ul>
         </nav>
       </aside>
-      <main class="page-main product-cases-main">
-        <section class="product-cases-intro" aria-labelledby="product-cases-intro-title">
-          <header class="resume-header product-cases-intro-header">
-            <h1 id="product-cases-intro-title" class="resume-title product-cases-intro-title">介绍</h1>
-            <p class="resume-summary product-cases-intro-summary">
-              我连续 7 年负责交易履约产品线，围绕订单管理、打单发货、售后处理、移动履约与多店铺协同，持续推动产品能力、团队协作和商业化增长。掌中宝交易是一款面向淘宝、天猫商家的交易履约 SaaS，帮助中小商家提升订单处理、发货售后、多店铺协作和移动办公效率。
-            </p>
-          </header>
+      <main class="page-main product-cases-main product-portfolio-page">
+        <h1 class="visually-hidden">产品案例</h1>
+
+        <section class="portfolio-projects" aria-label="产品项目列表">
+          <article class="portfolio-project portfolio-project--right reveal-item" style="--accent: #18a6f7">
+            <p class="portfolio-role">面向淘宝天猫商家的轻量级交易履约系统</p>
+            <a class="portfolio-image-link" href="#trade" aria-label="查看掌中宝交易">
+              <img src="assets/case-trade.svg" alt="掌中宝交易项目占位图" />
+            </a>
+            <a id="trade" class="portfolio-title-link" href="#trade">掌中宝交易</a>
+          </article>
+
+          <article class="portfolio-project portfolio-project--left reveal-item" style="--accent: #ff9b54">
+            <p class="portfolio-role">帮助商家稳定维护商品发布编辑库存和上下架</p>
+            <a class="portfolio-image-link" href="#goods" aria-label="查看掌中宝商品">
+              <img src="assets/case-goods.svg" alt="掌中宝商品项目占位图" />
+            </a>
+            <a id="goods" class="portfolio-title-link" href="#goods">掌中宝商品</a>
+          </article>
+
+          <article class="portfolio-project portfolio-project--right reveal-item" style="--accent: #8f7cff">
+            <p class="portfolio-role">降低中小商家配置活动和组合优惠的操作成本</p>
+            <a class="portfolio-image-link" href="#promo" aria-label="查看掌中宝促销">
+              <img src="assets/case-promo.svg" alt="掌中宝促销项目占位图" />
+            </a>
+            <a id="promo" class="portfolio-title-link" href="#promo">掌中宝促销</a>
+          </article>
+
+          <article class="portfolio-project portfolio-project--left reveal-item" style="--accent: #25b784">
+            <p class="portfolio-role">把经营分析效率插件和日常辅助能力整合成工具生态</p>
+            <a class="portfolio-image-link" href="#tools" aria-label="查看工具吧">
+              <img src="assets/case-tools.svg" alt="工具吧项目占位图" />
+            </a>
+            <a id="tools" class="portfolio-title-link" href="#tools">工具吧</a>
+          </article>
+
+          <article class="portfolio-project portfolio-project--right reveal-item" style="--accent: #f05f73">
+            <p class="portfolio-role">服务多店铺商家统一看店管单和协同经营</p>
+            <a class="portfolio-image-link" href="#multi-store" aria-label="查看多卖宝">
+              <img src="assets/case-multistore.svg" alt="多卖宝项目占位图" />
+            </a>
+            <a id="multi-store" class="portfolio-title-link" href="#multi-store">多卖宝</a>
+          </article>
         </section>
-        <section class="product-cases-hero" aria-label="掌中宝交易作品首屏">
-          <img class="product-cases-hero-image" src="assets/product-cases-hero-trade-work-00.png" alt="掌中宝交易，面向淘宝、天猫商家的轻量级交易履约 OMS 系统" />
-        </section>
-        <section class="case-section case-flow" aria-labelledby="case-flow-title">
-          <div class="case-section-header reveal-item">
-            <p class="case-section-kicker">Order Flow</p>
-            <h2 id="case-flow-title">订单系统流程图</h2>
-            <p>用单据关系和泳道流程呈现 OMS 从平台订单同步、拆合单、打单发货到售后闭环的核心链路。</p>
-          </div>
-          <div class="flow-diagram-grid">
-            <figure class="flow-diagram-card reveal-item">
-              <button
-                class="flow-diagram-trigger"
-                type="button"
-                data-lightbox-src="素材/掌中宝交易OMS_单据流转ER图_简洁无交叉版.drawio.png"
-                data-lightbox-alt="掌中宝交易 OMS 单据流转 ER 图"
-              >
-                <img src="素材/掌中宝交易OMS_单据流转ER图_简洁无交叉版.drawio.png" alt="掌中宝交易 OMS 单据流转 ER 图" />
-              </button>
-              <figcaption>单据流转 ER 图</figcaption>
-            </figure>
-            <figure class="flow-diagram-card reveal-item">
-              <button
-                class="flow-diagram-trigger"
-                type="button"
-                data-lightbox-src="素材/掌中宝OMS订单管理泳道图_优化版.drawio.png"
-                data-lightbox-alt="掌中宝 OMS 订单管理泳道图"
-              >
-                <img src="素材/掌中宝OMS订单管理泳道图_优化版.drawio.png" alt="掌中宝 OMS 订单管理泳道图" />
-              </button>
-              <figcaption>订单管理泳道图</figcaption>
-            </figure>
-          </div>
-        </section>
-        <section class="case-section case-results" aria-labelledby="case-results-title">
-          <div class="case-section-header reveal-item">
-            <p class="case-section-kicker">成果归纳</p>
-            <h2 id="case-results-title">项目成果</h2>
-            <p>从定位验证提效增长到商业化形成可持续迭代的轻量履约产品闭环</p>
-          </div>
-          <div class="project-result-stack">
-            <article class="project-result-card reveal-item is-active">
-              <h3>轻量履约定位</h3>
-              <p>项目早期判断市场存在明显断层重型系统学习成本高部署复杂价格门槛高平台基础工具又难以支撑多订单多物流多售后场景因此将产品定位为面向中小商家的轻量高效移动优先履约工具优先解决看单找单打单发货售后等高频刚需</p>
-            </article>
-            <article class="project-result-card reveal-item">
-              <h3>从零到一验证</h3>
-              <p>从基础订单管理切入没有一次建设完整系统而是围绕订单同步订单列表搜索筛选批量处理打单发货物流回传和简单售后协同快速上线通过真实商家日常使用验证需求上线首月用户突破一万证明轻量履约工具具备持续使用价值</p>
-            </article>
-            <article class="project-result-card reveal-item">
-              <h3>订单链路提效</h3>
-              <p>进入成长期后围绕商家找单慢定位难批量处理成本高等问题持续优化订单列表字段状态标识组合筛选批量操作和异常提醒并补充拆单合单打单发货物流回传等关键能力让商家在一个页面完成更多判断和处理订单效率显著提升</p>
-            </article>
-            <article class="project-result-card reveal-item">
-              <h3>规模增长路径</h3>
-              <p>在核心链路稳定后将重点从功能可用转向规模化获客激活转化和留存依托平台生态入口和已有商家用户导流新用户进入后优先引导完成订单同步筛选打单发货等核心动作让商家快速感知价值最终形成六十万以上用户规模</p>
-            </article>
-            <article class="project-result-card reveal-item">
-              <h3>差异付费场景</h3>
-              <p>在平台免费能力增强和竞品同质化加剧后继续寻找基础工具覆盖不足但商家付费意愿明确的场景虚拟商品自动发货成为重要突破面向卡密资料链接教程等商品实现付款后自动交付减少人工客服发送成本降低漏发错发延迟发货风险</p>
-            </article>
-            <article class="project-result-card reveal-item">
-              <h3>商业闭环搭建</h3>
-              <p>完成用户规模积累后围绕真实经营价值构建分层商业化体系用基础能力降低使用门槛用批量处理打单发货订单筛选承接效率诉求用自动化和差异场景提升高阶价值最终形成从免费获客价值感知付费转化到续费留存的完整闭环</p>
-            </article>
-          </div>
-        </section>
-        <section class="case-section case-features" aria-labelledby="case-features-title">
-          <div class="case-section-header reveal-item">
-            <p class="case-section-kicker">Core Modules</p>
-            <h2 id="case-features-title">主要功能模块</h2>
-            <p>围绕商家每日履约动作，把订单处理、发货、售后和自动化能力组织成稳定工作台。</p>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card reveal-item">
-              <span>01</span>
-              <h3>订单管理</h3>
-              <p>订单同步、状态筛选、买家与商品检索、批量处理，帮助商家快速定位待处理订单。</p>
-            </article>
-            <article class="feature-card reveal-item">
-              <span>02</span>
-              <h3>打单发货</h3>
-              <p>支持批量打单、电子面单、拣货核验和物流回传，降低从待发货到已发货的操作成本。</p>
-            </article>
-            <article class="feature-card reveal-item">
-              <span>03</span>
-              <h3>退款售后</h3>
-              <p>衔接售后申请、退货入库、退款状态和订单闭环，减少平台与商家系统之间的信息断点。</p>
-            </article>
-            <article class="feature-card reveal-item">
-              <span>04</span>
-              <h3>虚拟商品自动发货</h3>
-              <p>面向卡密、资料、链接等虚拟商品，付款后自动发送内容，减少漏发、错发和客服成本。</p>
-            </article>
-          </div>
-        </section>
+
+        <button class="portfolio-back-top" type="button" aria-label="回到顶部">
+          <span aria-hidden="true">↑</span>
+        </button>
       </main>
-    </div>
-    <div class="image-lightbox" role="dialog" aria-modal="true" aria-label="流程图原图预览" hidden>
-      <button class="image-lightbox-close" type="button" aria-label="关闭原图预览">×</button>
-      <img class="image-lightbox-image" src="" alt="" />
     </div>
     <script src="script.js"></script>
   </body>

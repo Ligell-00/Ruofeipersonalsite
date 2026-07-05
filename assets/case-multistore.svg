@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-store product placeholder</title>
+  <desc id="desc">Abstract multi-store operation illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff5f7"/>
+      <stop offset="1" stop-color="#ffc6cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="318" cy="308" r="82" fill="#f05f73" opacity=".2"/>
+  <path d="M110 170h180v126H110z" fill="#fff" stroke="#d93e57" stroke-width="7"/>
+  <path d="M96 170l32-62h144l32 62z" fill="#f05f73"/>
+  <path d="M128 108v62m36-62v62m36-62v62m36-62v62m36-62v62" stroke="#fff" stroke-width="8"/>
+  <rect x="136" y="214" width="48" height="82" rx="10" fill="#ffdbe0"/>
+  <rect x="210" y="210" width="50" height="34" rx="10" fill="#ffdbe0"/>
+  <path d="M101 123l-25-25m223 25l25-25M200 78V42" stroke="#d93e57" stroke-width="12" stroke-linecap="round"/>
+</svg>

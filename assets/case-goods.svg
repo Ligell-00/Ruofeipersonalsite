@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Goods product placeholder</title>
+  <desc id="desc">Abstract product catalog illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8f0"/>
+      <stop offset="1" stop-color="#ffd2a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="84" cy="88" r="70" fill="#ff9b54" opacity=".22"/>
+  <rect x="100" y="86" width="200" height="228" rx="28" fill="#fff" stroke="#e97827" stroke-width="7"/>
+  <rect x="132" y="124" width="58" height="58" rx="16" fill="#ff9b54"/>
+  <rect x="210" y="130" width="60" height="12" rx="6" fill="#ffb47d"/>
+  <rect x="210" y="158" width="42" height="12" rx="6" fill="#ffb47d"/>
+  <rect x="132" y="206" width="136" height="14" rx="7" fill="#ffd4b3"/>
+  <rect x="132" y="238" width="104" height="14" rx="7" fill="#ffd4b3"/>
+  <rect x="132" y="270" width="72" height="14" rx="7" fill="#ffd4b3"/>
+  <path d="M272 92l35 52h-70z" fill="#e97827" opacity=".9"/>
+</svg>

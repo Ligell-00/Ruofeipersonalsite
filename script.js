@@ -10,13 +10,9 @@ const resumeLinks = [...document.querySelectorAll('.resume-nav-link')];
 const trackedSections = [...document.querySelectorAll('main section[id], header[id]')];
 const resumeSections = [...document.querySelectorAll('.resume-content > section[id]')];
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article, .feature-card, .project-result-card')];
+const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article, .portfolio-project')];
 const revealItems = [...document.querySelectorAll('.reveal-item')];
-const lightbox = document.querySelector('.image-lightbox');
-const lightboxImage = document.querySelector('.image-lightbox-image');
-const lightboxClose = document.querySelector('.image-lightbox-close');
-const diagramTriggers = [...document.querySelectorAll('.flow-diagram-trigger')];
-const resultCards = [...document.querySelectorAll('.project-result-card')];
+const portfolioBackTop = document.querySelector('.portfolio-back-top');
 
 hoverCards.forEach((card) => {
   card.addEventListener('pointerenter', () => card.classList.add('is-hover'));
@@ -53,7 +49,6 @@ document.addEventListener('pointerdown', (event) => {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
-  if (event.key === 'Escape') closeLightbox();
 });
 
 document.querySelectorAll('.slide-menu a, a[href^="#"]').forEach((link) => {
@@ -118,55 +113,19 @@ function updateActiveLinks() {
   });
 }
 
-function updateActiveResultCard() {
-  if (!resultCards.length) return;
-  const anchor = window.innerHeight * 0.42;
-  let activeCard = resultCards[0];
-
-  resultCards.forEach((card) => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top <= anchor) activeCard = card;
-  });
-
-  resultCards.forEach((card) => {
-    card.classList.toggle('is-active', card === activeCard);
-  });
+function updatePortfolioBackTop() {
+  if (!portfolioBackTop) return;
+  portfolioBackTop.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.8);
 }
 
 window.addEventListener('scroll', updateActiveLinks, { passive: true });
-window.addEventListener('scroll', updateActiveResultCard, { passive: true });
+window.addEventListener('scroll', updatePortfolioBackTop, { passive: true });
 window.addEventListener('resize', updateActiveLinks);
-window.addEventListener('resize', updateActiveResultCard);
 updateActiveLinks();
-updateActiveResultCard();
+updatePortfolioBackTop();
 
-function openLightbox(src, alt) {
-  if (!lightbox || !lightboxImage) return;
-  lightboxImage.src = src;
-  lightboxImage.alt = alt;
-  lightbox.hidden = false;
-  document.body.classList.add('menu-open');
-}
-
-function closeLightbox() {
-  if (!lightbox || !lightboxImage) return;
-  lightbox.hidden = true;
-  lightboxImage.removeAttribute('src');
-  lightboxImage.alt = '';
-  document.body.classList.remove('menu-open');
-}
-
-diagramTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', () => {
-    const src = trigger.dataset.lightboxSrc;
-    if (!src) return;
-    openLightbox(src, trigger.dataset.lightboxAlt || '');
-  });
-});
-
-lightboxClose?.addEventListener('click', closeLightbox);
-lightbox?.addEventListener('click', (event) => {
-  if (event.target === lightbox) closeLightbox();
+portfolioBackTop?.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 if ('IntersectionObserver' in window) {

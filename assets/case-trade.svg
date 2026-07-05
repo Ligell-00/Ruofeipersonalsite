@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Trade product placeholder</title>
+  <desc id="desc">Abstract order management dashboard illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#b9e9ff"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d7efff"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="320" cy="76" r="88" fill="#18a6f7" opacity=".2"/>
+  <rect x="70" y="95" width="260" height="175" rx="24" fill="url(#screen)" stroke="#0b7ec8" stroke-width="7"/>
+  <rect x="102" y="132" width="70" height="16" rx="8" fill="#18a6f7"/>
+  <rect x="102" y="168" width="194" height="13" rx="7" fill="#8bd7ff"/>
+  <rect x="102" y="199" width="156" height="13" rx="7" fill="#8bd7ff"/>
+  <rect x="102" y="230" width="118" height="13" rx="7" fill="#8bd7ff"/>
+  <rect x="246" y="211" width="50" height="34" rx="10" fill="#18a6f7"/>
+  <path d="M154 294h92l18 39H136z" fill="#0d75b8"/>
+  <rect x="108" y="333" width="184" height="16" rx="8" fill="#0d75b8"/>
+</svg>

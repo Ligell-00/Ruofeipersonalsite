@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Tools product placeholder</title>
+  <desc id="desc">Abstract merchant tools grid illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f1fff8"/>
+      <stop offset="1" stop-color="#b8f1d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="94" cy="304" r="82" fill="#25b784" opacity=".2"/>
+  <rect x="92" y="92" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
+  <rect x="216" y="92" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
+  <rect x="92" y="216" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
+  <rect x="216" y="216" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
+  <path d="M137 120v36m-18-18h36m89-18h38m-38 36h38m-143 89l36 36m0-36l-36 36m111-24h24m-12-12v24" stroke="#25b784" stroke-width="12" stroke-linecap="round"/>
+</svg>
