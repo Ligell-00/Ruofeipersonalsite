@@ -1,24 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
-  <title id="title">Trade product placeholder</title>
-  <desc id="desc">Abstract order management dashboard illustration.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">Trade OMS desk scene</title>
+  <desc id="desc">A refined desk scene with an order management dashboard, packages, printer slips, and workflow cards.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#f7fbff"/>
-      <stop offset="1" stop-color="#b9e9ff"/>
+    <radialGradient id="trade-bg" cx="44%" cy="32%" r="68%">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset=".68" stop-color="#dedede"/>
+      <stop offset="1" stop-color="#c8c8c8"/>
+    </radialGradient>
+    <linearGradient id="trade-screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15171a"/>
+      <stop offset="1" stop-color="#050607"/>
     </linearGradient>
-    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+    <linearGradient id="trade-panel" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#d7efff"/>
+      <stop offset="1" stop-color="#e7edf2"/>
     </linearGradient>
+    <filter id="trade-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#111" flood-opacity=".18"/>
+    </filter>
   </defs>
-  <rect width="400" height="400" fill="url(#bg)"/>
-  <circle cx="320" cy="76" r="88" fill="#18a6f7" opacity=".2"/>
-  <rect x="70" y="95" width="260" height="175" rx="24" fill="url(#screen)" stroke="#0b7ec8" stroke-width="7"/>
-  <rect x="102" y="132" width="70" height="16" rx="8" fill="#18a6f7"/>
-  <rect x="102" y="168" width="194" height="13" rx="7" fill="#8bd7ff"/>
-  <rect x="102" y="199" width="156" height="13" rx="7" fill="#8bd7ff"/>
-  <rect x="102" y="230" width="118" height="13" rx="7" fill="#8bd7ff"/>
-  <rect x="246" y="211" width="50" height="34" rx="10" fill="#18a6f7"/>
-  <path d="M154 294h92l18 39H136z" fill="#0d75b8"/>
-  <rect x="108" y="333" width="184" height="16" rx="8" fill="#0d75b8"/>
+  <rect width="520" height="520" fill="url(#trade-bg)"/>
+  <path d="M24 350c94-52 217-66 344-37 73 17 112 49 141 85v122H24z" fill="#f7f7f4" opacity=".72"/>
+  <path d="M398 126c27 5 54 18 79 38" fill="none" stroke="#777" stroke-width="2" opacity=".48"/>
+  <rect x="121" y="142" width="290" height="184" rx="22" fill="url(#trade-screen)" filter="url(#trade-shadow)"/>
+  <rect x="133" y="154" width="266" height="160" rx="14" fill="#111417"/>
+  <circle cx="153" cy="171" r="4" fill="#f7f7f7"/>
+  <circle cx="167" cy="171" r="4" fill="#d7d7d7"/>
+  <circle cx="181" cy="171" r="4" fill="#a4a4a4"/>
+  <rect x="159" y="199" width="92" height="52" rx="12" fill="url(#trade-panel)"/>
+  <rect x="272" y="199" width="92" height="52" rx="12" fill="#222831"/>
+  <rect x="159" y="269" width="205" height="12" rx="6" fill="#626b73"/>
+  <rect x="159" y="291" width="154" height="10" rx="5" fill="#414850"/>
+  <path d="M182 224h44m-44 16h28" stroke="#18a6f7" stroke-width="9" stroke-linecap="round"/>
+  <path d="M298 225h38m-38 17h50" stroke="#f5f5f2" stroke-width="8" stroke-linecap="round" opacity=".78"/>
+  <path d="M223 327h85l18 45H205z" fill="#767a7c"/>
+  <rect x="174" y="370" width="183" height="22" rx="10" fill="#5f6366"/>
+  <rect x="136" y="407" width="260" height="28" rx="9" fill="#222"/>
+  <path d="M156 421h214" stroke="#555" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 9"/>
+  <g opacity=".86">
+    <rect x="48" y="225" width="54" height="126" rx="6" fill="#f8f8f6" stroke="#777" stroke-width="2"/>
+    <rect x="71" y="215" width="54" height="136" rx="6" fill="#eeeeeb" stroke="#777" stroke-width="2"/>
+    <circle cx="92" cy="303" r="6" fill="#2a2a2a"/>
+  </g>
+  <g filter="url(#trade-shadow)">
+    <rect x="396" y="282" width="68" height="86" rx="13" fill="#f6f6f4"/>
+    <rect x="408" y="297" width="45" height="8" rx="4" fill="#111"/>
+    <rect x="408" y="318" width="32" height="8" rx="4" fill="#aaa"/>
+    <rect x="408" y="340" width="42" height="8" rx="4" fill="#c9c9c9"/>
+  </g>
+  <path d="M427 248l31 34M462 248l-31 34" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+  <rect x="64" y="382" width="74" height="26" rx="6" fill="#1a1a1a" transform="rotate(-10 64 382)"/>
 </svg>

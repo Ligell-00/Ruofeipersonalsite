@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trade OMS Case Page"
+  short_description: "Build and refine the 掌中宝交易专题案例页"
+  default_prompt: "Use $trade-oms-case-page to create or refine the 掌中宝交易 OMS专题案例页。"

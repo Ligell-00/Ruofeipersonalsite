@@ -1,18 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
-  <title id="title">Multi-store product placeholder</title>
-  <desc id="desc">Abstract multi-store operation illustration.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-store collaboration console</title>
+  <desc id="desc">A multi-store collaboration console with connected store cards, status panels, and shared order operation details.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#fff5f7"/>
-      <stop offset="1" stop-color="#ffc6cf"/>
+    <radialGradient id="multi-bg" cx="46%" cy="31%" r="70%">
+      <stop offset="0" stop-color="#fcfbfb"/>
+      <stop offset=".68" stop-color="#e0dcdd"/>
+      <stop offset="1" stop-color="#cbc4c6"/>
+    </radialGradient>
+    <linearGradient id="multi-console" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#efe9ea"/>
     </linearGradient>
+    <filter id="multi-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#251116" flood-opacity=".16"/>
+    </filter>
   </defs>
-  <rect width="400" height="400" fill="url(#bg)"/>
-  <circle cx="318" cy="308" r="82" fill="#f05f73" opacity=".2"/>
-  <path d="M110 170h180v126H110z" fill="#fff" stroke="#d93e57" stroke-width="7"/>
-  <path d="M96 170l32-62h144l32 62z" fill="#f05f73"/>
-  <path d="M128 108v62m36-62v62m36-62v62m36-62v62m36-62v62" stroke="#fff" stroke-width="8"/>
-  <rect x="136" y="214" width="48" height="82" rx="10" fill="#ffdbe0"/>
-  <rect x="210" y="210" width="50" height="34" rx="10" fill="#ffdbe0"/>
-  <path d="M101 123l-25-25m223 25l25-25M200 78V42" stroke="#d93e57" stroke-width="12" stroke-linecap="round"/>
+  <rect width="520" height="520" fill="url(#multi-bg)"/>
+  <path d="M32 382c94-51 224-60 352-26 56 15 96 39 123 72v92H32z" fill="#f8f7f4" opacity=".74"/>
+  <g filter="url(#multi-shadow)">
+    <rect x="111" y="126" width="298" height="230" rx="30" fill="#171416"/>
+    <rect x="130" y="148" width="260" height="184" rx="20" fill="url(#multi-console)"/>
+  </g>
+  <rect x="159" y="177" width="82" height="62" rx="16" fill="#f05f73"/>
+  <rect x="264" y="177" width="84" height="62" rx="16" fill="#e8dfe1"/>
+  <rect x="159" y="263" width="189" height="14" rx="7" fill="#d6cfd1"/>
+  <rect x="159" y="292" width="138" height="13" rx="7" fill="#d6cfd1"/>
+  <path d="M182 211h36M286 202h38M286 222h28" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".9"/>
+  <path d="M214 356h92l18 42H196z" fill="#777274"/>
+  <rect x="166" y="396" width="190" height="20" rx="9" fill="#5f5b5d"/>
+  <g filter="url(#multi-shadow)">
+    <rect x="61" y="222" width="99" height="91" rx="18" fill="#f9f8f5"/>
+    <path d="M79 253l18-25h45l18 25z" fill="#2c2628"/>
+    <rect x="88" y="268" width="28" height="33" rx="7" fill="#eadfe2"/>
+    <rect x="124" y="268" width="19" height="16" rx="5" fill="#f05f73"/>
+  </g>
+  <g filter="url(#multi-shadow)">
+    <rect x="367" y="238" width="93" height="106" rx="20" fill="#f8f7f4"/>
+    <path d="M387 269l16-22h40l16 22z" fill="#f05f73"/>
+    <path d="M391 299h48M391 322h34" stroke="#2d2729" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <path d="M160 260c35-31 81-31 116 0 34 30 67 25 98-4" fill="none" stroke="#f05f73" stroke-width="7" stroke-linecap="round" opacity=".72"/>
+  <circle cx="158" cy="260" r="8" fill="#f05f73"/>
+  <circle cx="276" cy="260" r="8" fill="#f05f73"/>
+  <circle cx="374" cy="256" r="8" fill="#f05f73"/>
+  <path d="M398 111c29 8 56 25 77 50" fill="none" stroke="#7b7375" stroke-width="2" opacity=".5"/>
 </svg>

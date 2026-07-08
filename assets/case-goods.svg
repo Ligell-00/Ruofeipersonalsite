@@ -1,20 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
-  <title id="title">Goods product placeholder</title>
-  <desc id="desc">Abstract product catalog illustration.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">Goods management workspace</title>
+  <desc id="desc">A product management workspace with catalog cards, SKU panels, inventory labels, and interface details.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#fff8f0"/>
-      <stop offset="1" stop-color="#ffd2a9"/>
+    <radialGradient id="goods-bg" cx="47%" cy="31%" r="69%">
+      <stop offset="0" stop-color="#fbfbfa"/>
+      <stop offset=".7" stop-color="#dedbd7"/>
+      <stop offset="1" stop-color="#c9c5bf"/>
+    </radialGradient>
+    <linearGradient id="goods-card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#eceae7"/>
     </linearGradient>
+    <filter id="goods-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#1f1a16" flood-opacity=".17"/>
+    </filter>
   </defs>
-  <rect width="400" height="400" fill="url(#bg)"/>
-  <circle cx="84" cy="88" r="70" fill="#ff9b54" opacity=".22"/>
-  <rect x="100" y="86" width="200" height="228" rx="28" fill="#fff" stroke="#e97827" stroke-width="7"/>
-  <rect x="132" y="124" width="58" height="58" rx="16" fill="#ff9b54"/>
-  <rect x="210" y="130" width="60" height="12" rx="6" fill="#ffb47d"/>
-  <rect x="210" y="158" width="42" height="12" rx="6" fill="#ffb47d"/>
-  <rect x="132" y="206" width="136" height="14" rx="7" fill="#ffd4b3"/>
-  <rect x="132" y="238" width="104" height="14" rx="7" fill="#ffd4b3"/>
-  <rect x="132" y="270" width="72" height="14" rx="7" fill="#ffd4b3"/>
-  <path d="M272 92l35 52h-70z" fill="#e97827" opacity=".9"/>
+  <rect width="520" height="520" fill="url(#goods-bg)"/>
+  <circle cx="107" cy="106" r="68" fill="#fff" opacity=".5"/>
+  <path d="M52 393c87-49 204-59 337-24 48 13 86 35 116 66v85H52z" fill="#f8f7f4" opacity=".76"/>
+  <g filter="url(#goods-shadow)">
+    <rect x="136" y="88" width="248" height="335" rx="30" fill="#151515"/>
+    <rect x="151" y="112" width="218" height="286" rx="20" fill="url(#goods-card)"/>
+  </g>
+  <rect x="176" y="140" width="76" height="76" rx="20" fill="#ff9b54"/>
+  <rect x="270" y="149" width="66" height="11" rx="6" fill="#2c2c2c"/>
+  <rect x="270" y="178" width="44" height="10" rx="5" fill="#bdb9b5"/>
+  <rect x="270" y="204" width="72" height="10" rx="5" fill="#d4d0cb"/>
+  <rect x="176" y="248" width="166" height="16" rx="8" fill="#cfcac4"/>
+  <rect x="176" y="286" width="132" height="16" rx="8" fill="#ddd8d2"/>
+  <rect x="176" y="324" width="92" height="16" rx="8" fill="#ddd8d2"/>
+  <rect x="289" y="308" width="54" height="54" rx="14" fill="#ff9b54" opacity=".88"/>
+  <path d="M203 176h22m-11-11v22" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  <g filter="url(#goods-shadow)">
+    <rect x="63" y="253" width="112" height="78" rx="17" fill="#f8f8f5"/>
+    <path d="M82 280h57M82 305h38" stroke="#9e9b97" stroke-width="10" stroke-linecap="round"/>
+    <path d="M154 253l34-42 28 42z" fill="#2e2b28"/>
+  </g>
+  <g filter="url(#goods-shadow)">
+    <rect x="356" y="240" width="96" height="118" rx="20" fill="#f7f6f3"/>
+    <rect x="379" y="265" width="50" height="50" rx="12" fill="#d9d5ce"/>
+    <path d="M378 332h51" stroke="#2d2b28" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <path d="M384 95c34 10 61 28 81 55" fill="none" stroke="#817a72" stroke-width="2" opacity=".45"/>
 </svg>

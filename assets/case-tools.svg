@@ -1,17 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
-  <title id="title">Tools product placeholder</title>
-  <desc id="desc">Abstract merchant tools grid illustration.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">Merchant tools operating desk</title>
+  <desc id="desc">An operating design scene with a tools dashboard, analytics widgets, campaign material cards, and shortcut modules.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#f1fff8"/>
-      <stop offset="1" stop-color="#b8f1d8"/>
+    <radialGradient id="tools-bg" cx="45%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#fbfcfb"/>
+      <stop offset=".68" stop-color="#dde2df"/>
+      <stop offset="1" stop-color="#c6ccc8"/>
+    </radialGradient>
+    <linearGradient id="tools-panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e8efeb"/>
     </linearGradient>
+    <filter id="tools-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#102018" flood-opacity=".16"/>
+    </filter>
   </defs>
-  <rect width="400" height="400" fill="url(#bg)"/>
-  <circle cx="94" cy="304" r="82" fill="#25b784" opacity=".2"/>
-  <rect x="92" y="92" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
-  <rect x="216" y="92" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
-  <rect x="92" y="216" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
-  <rect x="216" y="216" width="92" height="92" rx="24" fill="#fff" stroke="#15966b" stroke-width="7"/>
-  <path d="M137 120v36m-18-18h36m89-18h38m-38 36h38m-143 89l36 36m0-36l-36 36m111-24h24m-12-12v24" stroke="#25b784" stroke-width="12" stroke-linecap="round"/>
+  <rect width="520" height="520" fill="url(#tools-bg)"/>
+  <path d="M30 382c96-52 226-60 352-27 56 15 96 39 124 73v92H30z" fill="#f8f8f4" opacity=".74"/>
+  <g filter="url(#tools-shadow)">
+    <rect x="116" y="117" width="289" height="224" rx="28" fill="#161816"/>
+    <rect x="133" y="137" width="255" height="180" rx="18" fill="url(#tools-panel)"/>
+  </g>
+  <rect x="158" y="165" width="86" height="58" rx="16" fill="#25b784"/>
+  <rect x="264" y="165" width="88" height="58" rx="16" fill="#e0e7e3"/>
+  <rect x="158" y="244" width="194" height="44" rx="14" fill="#e9efeb"/>
+  <path d="M180 196h42M285 190h42M180 267h82" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  <path d="M285 205h30" stroke="#7e8983" stroke-width="9" stroke-linecap="round"/>
+  <path d="M186 276c30-25 51-23 75-7 22 14 40 12 60-18" fill="none" stroke="#25b784" stroke-width="8" stroke-linecap="round"/>
+  <path d="M222 342h77l16 39H206z" fill="#767c78"/>
+  <rect x="176" y="379" width="172" height="20" rx="9" fill="#5d6560"/>
+  <g filter="url(#tools-shadow)">
+    <rect x="57" y="241" width="92" height="118" rx="20" fill="#f9f9f6"/>
+    <rect x="78" y="266" width="50" height="50" rx="14" fill="#dfe5e1"/>
+    <path d="M82 335h43" stroke="#25b784" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#tools-shadow)">
+    <rect x="372" y="252" width="86" height="96" rx="18" fill="#f8f8f5"/>
+    <path d="M395 280h40M395 305h25M395 330h33" stroke="#2e342f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <rect x="70" y="167" width="54" height="22" rx="8" fill="#232722" transform="rotate(-12 70 167)"/>
+  <path d="M401 108c29 9 54 26 74 51" fill="none" stroke="#748078" stroke-width="2" opacity=".5"/>
 </svg>

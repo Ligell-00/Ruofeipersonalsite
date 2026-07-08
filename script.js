@@ -13,6 +13,11 @@ const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 const hoverCards = [...document.querySelectorAll('.job-card, .skill-groups article, .portfolio-project')];
 const revealItems = [...document.querySelectorAll('.reveal-item')];
 const portfolioBackTop = document.querySelector('.portfolio-back-top');
+const lightbox = document.querySelector('.trade-lightbox');
+const lightboxCanvas = document.querySelector('.trade-lightbox-canvas');
+const lightboxImage = document.querySelector('.trade-lightbox-image');
+const lightboxClose = document.querySelector('.trade-lightbox-close');
+const lightboxTriggers = [...document.querySelectorAll('.trade-lightbox-trigger')];
 
 hoverCards.forEach((card) => {
   card.addEventListener('pointerenter', () => card.classList.add('is-hover'));
@@ -49,12 +54,43 @@ document.addEventListener('pointerdown', (event) => {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
+  if (event.key === 'Escape') closeLightbox();
 });
 
 document.querySelectorAll('.slide-menu a, a[href^="#"]').forEach((link) => {
   link.addEventListener('click', () => {
     setMenuOpen(false);
   });
+});
+
+function openLightbox(src, alt) {
+  if (!lightbox || !lightboxImage) return;
+  lightboxImage.src = src;
+  lightboxImage.alt = alt;
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lightbox-open');
+  lightboxClose?.focus();
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage) return;
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+  lightboxImage.removeAttribute('src');
+  lightboxImage.alt = '';
+}
+
+lightboxTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    openLightbox(trigger.dataset.lightboxSrc || '', trigger.dataset.lightboxAlt || '');
+  });
+});
+
+lightboxClose?.addEventListener('click', closeLightbox);
+lightboxCanvas?.addEventListener('click', (event) => {
+  if (event.target === lightboxCanvas) closeLightbox();
 });
 
 function applyTheme(theme) {
@@ -87,9 +123,10 @@ function currentSectionId(sections, offset) {
 
 function updateActiveLinks() {
   if (currentPage !== 'index.html') {
+    const activePage = currentPage.startsWith('case-') ? 'product-cases.html' : currentPage;
     primaryLinks.forEach((link) => {
       const href = link.getAttribute('href');
-      link.classList.toggle('active', href === currentPage);
+      link.classList.toggle('active', href === activePage);
     });
     return;
   }
