@@ -589,7 +589,7 @@ body.menu-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(1) contrast(0.96);
+  filter: grayscale(0) contrast(1);
   transform: scale(1.03);
   transition:
     filter 420ms var(--ease-out),
@@ -621,10 +621,27 @@ body.menu-open {
   order: 2;
 }
 
+.portfolio-project--right .portfolio-image-link {
+  margin-left: calc(clamp(0.9rem, 1.75vw, 1.625rem) * -1);
+  transition:
+    box-shadow 360ms var(--ease-out),
+    filter 360ms var(--ease-out),
+    transform 360ms var(--ease-out),
+    margin-left 420ms var(--ease-menu);
+}
+
+.portfolio-project--left .portfolio-image-link {
+  margin-right: calc(clamp(0.9rem, 1.75vw, 1.625rem) * -1);
+  transition:
+    box-shadow 360ms var(--ease-out),
+    filter 360ms var(--ease-out),
+    transform 360ms var(--ease-out),
+    margin-right 420ms var(--ease-menu);
+}
+
 .portfolio-project:hover .portfolio-title-link,
 .portfolio-project:focus-within .portfolio-title-link,
 .portfolio-project.is-hover .portfolio-title-link {
-  color: var(--accent);
   transform: translateX(var(--title-hover-shift));
 }
 
@@ -653,6 +670,18 @@ body.menu-open {
 .portfolio-project.is-hover .portfolio-image-link {
   box-shadow: 0 34px 90px color-mix(in srgb, var(--accent) 28%, transparent);
   transform: scale(1.06);
+}
+
+.portfolio-project--right:hover .portfolio-image-link,
+.portfolio-project--right:focus-within .portfolio-image-link,
+.portfolio-project--right.is-hover .portfolio-image-link {
+  margin-left: 0;
+}
+
+.portfolio-project--left:hover .portfolio-image-link,
+.portfolio-project--left:focus-within .portfolio-image-link,
+.portfolio-project--left.is-hover .portfolio-image-link {
+  margin-right: 0;
 }
 
 .portfolio-project:hover img,
@@ -899,11 +928,31 @@ body.menu-open {
   letter-spacing: 0;
 }
 
+.case-story-section h3 {
+  margin: 1.15rem 0 0.55rem;
+  color: var(--color-fg-bold);
+  font-size: 1.02rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
 .case-story-section p {
   margin-bottom: 1.05rem;
   color: var(--color-fg);
   font-size: 1.04rem;
   line-height: 1.9;
+}
+
+.case-story-section ul {
+  margin: 0 0 1.1rem;
+  padding-left: 1.2rem;
+  color: var(--color-fg);
+  font-size: 1.04rem;
+  line-height: 1.85;
+}
+
+.case-story-section li + li {
+  margin-top: 0.35rem;
 }
 
 .case-story-section p:last-child {

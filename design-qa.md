@@ -258,3 +258,69 @@ Passed checks:
 - 已删除原 `03 / Market Opportunity` 完整章节。
 - 后续章节已上移，序列号从 `03 / Personas & Use Cases` 到 `13 / Strategic Learnings` 重新连续排列。
 - 页面未残留 `Market Opportunity` 文案或 `id="market"` 章节。
+
+---
+
+## 2026-07-08 掌中宝交易 OMS 首屏图替换
+
+Checked scope: `case-trade-oms.html`, `assets/trade-oms/`.
+
+Passed checks:
+
+- 首屏左侧原 2 张图已替换为 `trade-hero-device-showcase.png`。
+- 原首屏封面图已保存为 `hero-archive-trade-work-01.png`。
+- 原首屏泳道图已保存为 `hero-archive-trade-oms-swimlane.png`。
+- 本轮仅调整首屏图片引用，不改动首屏文案、导航和后续章节。
+
+---
+
+## 2026-07-08 掌中宝交易 OMS 首屏与项目背景图片交换
+
+Checked scope: `case-trade-oms.html`.
+
+Passed checks:
+
+- `01 / Product Overview` 原左侧 2 个媒体已移到首屏。
+- 首屏媒体顺序已调整为手机端合成图在上，项目介绍动效在下。
+- 原首屏设备展示图 `trade-hero-device-showcase.png` 已移动到 `01 / Product Overview` 左侧。
+
+---
+
+## 2026-07-09 掌中宝交易 OMS 项目背景配图重排
+
+Checked scope: `case-trade-oms.html`, `assets/trade-oms/trade-oms-er-flow.png`.
+
+Passed checks:
+
+- `01 / Product Overview` 左侧配图已调整为三张：订单管理流程图、单据流转 ER 图、界面展示图。
+- 订单管理流程图使用此前首屏流程图资源 `trade-oms-swimlane.png`。
+- 附件 ER 图已复制为正式资产 `trade-oms-er-flow.png` 并放在第二张。
+- 当前界面展示图 `trade-hero-device-showcase.png` 已保留为第三张。
+- 流程图和 ER 图均保留点击放大查看能力。
+
+---
+
+## 2026-07-09 掌中宝促销专题页文案搭建
+
+Checked scope: `case-promo.html`, `styles.css`.
+
+Passed checks:
+
+- 已按 `素材/掌中宝促销_项目介绍网站文案_简洁版.md` 的原有结构和文案搭建右侧专题页内容。
+- 页面保留左图右文结构，左侧仍为图片占位和关键指标。
+- 右侧保留源文档中的英文标题、序号、小标题、列表和路径说明。
+- 已补充案例正文三级标题和列表样式，兼容浅色 / 深色主题。
+- 本轮不新增正式促销截图资产，不改动导航和产品案例入口。
+
+---
+
+## 2026-07-09 产品案例页项目列表微调
+
+Checked scope: `product-cases.html`, `styles.css`, `index.html`, `case-trade-oms.html`, `case-goods.html`, `case-promo.html`, `vibe-coding.html`, `interaction-ui.html`.
+
+Passed checks:
+
+- 全站顶部导航和移动端菜单已暂时隐藏“交互/UI”入口，保留页面文件本身不删除。
+- 产品案例页已将“掌中宝促销”与“掌中宝商品”交换位置，顺序调整为交易、促销、商品、工具吧、多卖宝。
+- 五个项目的首行说明已按批注更新，删除或替换了逗号后的延展描述。
+- 产品案例页圆形项目图片默认恢复为彩色展示，悬停仍保留放大和阴影反馈。
