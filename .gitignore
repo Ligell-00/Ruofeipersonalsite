@@ -3,3 +3,5 @@
 素材/.$*
 *.bkp
 *.git/
+.workbuddy/
+tmp/

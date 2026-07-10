@@ -1,5 +1,129 @@
 # Design QA
 
+## 2026-07-09 工具吧案例页新建
+
+final result: passed
+
+Checked scope: `case-tools.html`, `styles.css`, `product-cases.html`.
+
+Passed checks:
+
+- 按 `素材/工具吧_项目介绍网站文案.md` 完全新建 `case-tools.html`，左图右文双栏结构，沿用 `trade-case-layout`。
+- 文档 5 个章节完整映射为 5 个 `case-story-section`：产品概述、工具入口与信息架构、权限体系设计、运营设计与服务详情页转化优化、帮助知识库建设。
+- 权限体系设计含 3 个 h3（角色边界、功能权限、数据权限）+ 收尾段。
+- 运营设计含 3 个 h3（价值表达清晰化、信息结构重组、转化路径优化）+ 收尾段。
+- 工具入口与信息架构含 9 条 ul 列表，帮助知识库含 5 条 ul 列表。
+- 新增 `.tools-case-main` CSS 类，accent 色 `#15a888`（teal），并加入 metrics strong 选择器。
+- `product-cases.html` 工具吧图片链接和标题链接从 `#tools` 改为 `case-tools.html`。
+- 不擅自发挥，文档原文逐段映射。
+- `git diff --check` 通过。
+
+---
+
+## 2026-07-09 掌中宝商品案例页文案替换
+
+final result: passed
+
+Checked scope: `case-goods.html`.
+
+Passed checks:
+
+- 按 `素材/掌中宝商品_项目介绍网站文案_P7体验设计版.md` 完全替换正文文案，不擅自发挥。
+- 保留页面结构（左图右文双栏、header/nav、左侧 metrics 面板），仅替换 `<article>` 内文案。
+- 文档 10 个章节完整映射为 10 个 `<section class="case-story-section">` + h2：产品概述、Ownership｜我的角色、01-06 核心设计成果、组件规范与多端一致性、影响与沉淀。
+- Ownership 下保留 h3「我的主要职责」+ 5 条 ul 列表。
+- 01-06 每节含描述段 +「设计方向包括：」+ ul 列表 + 部分有收尾段，与文档一致。
+- hero lede 改为文档副标题「面向淘宝 / 天猫商家的商品管理系统」。
+- meta description 同步更新为文档首段概述。
+- 文档末段缺句号处补齐句号。
+- `git diff --check` 通过。
+
+---
+
+## 2026-07-09 vibe coding 取名 Agent 第二屏
+
+final result: passed
+
+Reference: https://name-agent-all7.onrender.com/prototype/index.html
+
+Checked scope: `vibe-coding.html`, `styles.css`.
+
+Passed checks:
+
+- 在 Prompt Make 首屏下方新增取名 Agent 第二屏，两屏之间以 `border-top` 分隔。
+- 布局为左图右文（镜像首屏的右图左文）：`.vibe-section` grid 为 `1.08fr / 0.92fr`（左图为重）。
+- 左图使用内联 SVG 占位（720×520），显示"取名 Agent 原型截图 / 替换为实际截图即可"，用户可直接换为 `<img src="...">` 真实截图。
+- 右文包含标题「取名 Agent」、项目概述、meta 一行（vibe coding · AI 产品化 · 前端设计 · Render 部署）、反色药丸按钮。
+- 按钮链接到 `https://name-agent-all7.onrender.com/prototype/index.html`（target="_blank"），hover 上浮 + 箭头右移。
+- 第二屏为内容高度（非全屏），padding 使用 clamp 响应式保证留白。
+- 浅色/深色模式均跟随 `data-theme` 切换，卡片阴影、径向辉光、文字颜色自动适配。
+- Playwright/Puppeteer 都无法安装 Chromium（sandbox OOM），因此使用 SVG 占位而非真实截图。
+- `git diff --check` 通过。
+
+---
+
+## 2026-07-09 vibe coding 示意图白色背景处理
+
+final result: passed
+
+Checked scope: `assets/prompt-make-hero.png`.
+
+Passed checks:
+
+- 示意图 PNG 虽为 RGBA 格式，但内层存在大面积浅灰不透明背景像素，CSS 透明背景不够。
+- 用 BFS 从透明边缘向内侵蚀算法处理：遇 min(R,G,B) ≥ 220 的浅色像素变透明并继续传播，遇深色像素停止（保护浏览器窗口内容）。
+- 处理后顶部白色条和底部白角已转为透明；浏览器窗口内容（深色像素）完整保留。
+- 处理脚本用 Python Pillow，一次性运行，无临时文件残留。
+
+---
+
+## 2026-07-09 vibe coding 首屏内容精简与示意图背景处理
+
+final result: passed
+
+Checked scope: `vibe-coding.html`, `styles.css`.
+
+Passed checks:
+
+- 已删除左栏顶部 kicker 圆角标签「Chrome 插件 · AI Prompt 工具 · MVP」。
+- 已删除左栏「产品策略 · PRD · 交互设计 · AI 规则设计 · vibe coding」meta 一行。
+- 左栏现仅保留标题、项目概述和「查看项目」按钮；按钮补充 `margin-top: 1.5rem` 维持与概述段的呼吸节奏。
+- 示意图卡片 `.vibe-hero-frame` 背景由 `var(--color-bg)` 改为 `transparent`，去掉 Chrome 示意图后的白色背景。
+- 背景改动仅作用于 `.vibe-hero-frame`（该类专属于 vibe coding 首屏），未影响项目其他图片。
+- 浅色 / 深色模式均跟随现有 `data-theme` 切换，无横向滚动。
+- `git diff --check` 通过。
+
+---
+
+## 2026-07-09 vibe coding 首屏 Prompt Make 项目介绍
+
+final result: passed
+
+Reference: https://magic-portfolio.com/
+
+Checked scope: `vibe-coding.html`, `styles.css`, `assets/prompt-make-chrome-demo.png`.
+
+Passed checks:
+
+- `vibe-coding.html` 原“场景判断 / 原型验证 / 持续评测”摘要内容已替换为 Prompt Make 项目首屏，保留全站 `site-header` 导航、主题切换按钮和移动端侧滑菜单结构。
+- 首屏采用左文右图双栏布局：左栏为 kicker 标签 + 标题 + 项目概述 + 角色一行 + 查看项目按钮；右栏为 Chrome 示意图卡片。
+- 左栏标题为“Prompt Make”，内容根据 `项目学习/prompt-make-portfolio/index.html` 概括为 Chrome 插件一键优化 Prompt 的定位。
+- 按钮采用反色药丸样式（浅色模式深底浅字、深色模式浅底深字），hover 时上浮、加阴影、箭头右移，跟随 `data-theme` 自动切换。
+- 右栏示意图复制为正式资产 `assets/prompt-make-chrome-demo.png`，置于圆角卡片 + 阴影 + 蓝色 accent 径向辉光背景中。
+- 浅色模式：浅灰页面背景、白色图片卡、深色正文、蓝色 kicker，对比度可读。
+- 深色模式：深色背景、深色卡片阴影、浅色正文、浅蓝 kicker，对比度可读。
+- 首屏高度 `calc(100vh - header)`，桌面双栏比例 0.92fr / 1.08fr，无横向滚动。
+- 未新增移动端专项适配（按要求）。
+- 仅改动 vibe coding 首屏，未修改其他页面、导航或全局变量。
+- `git diff --check` 通过。
+
+Notes:
+
+- 使用临时本地服务 `python3 -m http.server 8765` 完成浏览器 QA。
+- “查看项目”按钮 `href="#"` 为占位，待后续接入 Prompt Make 详情页或外链时更新。
+
+---
+
 ## 2026-07-06 掌中宝交易专题页浅色/深色主题
 
 final result: passed

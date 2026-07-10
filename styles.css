@@ -722,6 +722,10 @@ body.menu-open {
   --case-accent: #8f7cff;
 }
 
+.tools-case-main {
+  --case-accent: #15a888;
+}
+
 [data-theme="dark"] .trade-case-main {
   background:
     linear-gradient(90deg, #171719 0, #171719 48%, #101012 48%, #101012 100%);
@@ -894,7 +898,8 @@ body.menu-open {
 }
 
 .goods-case-main .trade-case-metrics strong,
-.promo-case-main .trade-case-metrics strong {
+.promo-case-main .trade-case-metrics strong,
+.tools-case-main .trade-case-metrics strong {
   color: var(--case-accent);
   font-size: clamp(1.05rem, 1.45vw, 1.45rem);
   line-height: 1.14;
@@ -976,6 +981,7 @@ body.menu-open {
   --trade-soft: rgba(19, 26, 34, 0.62);
   --trade-border: rgba(19, 26, 34, 0.12);
   --trade-card: rgba(24, 144, 255, 0.08);
+  --trade-accent: #1890ff;
   --trade-shadow: rgba(20, 32, 46, 0.12);
   max-width: none;
   padding: 0;
@@ -992,6 +998,7 @@ body.menu-open {
   --trade-soft: rgba(245, 248, 251, 0.68);
   --trade-border: rgba(255, 255, 255, 0.1);
   --trade-card: rgba(24, 144, 255, 0.09);
+  --trade-accent: #1890ff;
   --trade-shadow: rgba(0, 0, 0, 0.24);
 }
 
@@ -1862,4 +1869,473 @@ body.lightbox-open {
   .skill-groups {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== vibe coding · Prompt Make 首屏 ===== */
+.vibe-hero-main {
+  max-width: none;
+  padding: 0;
+}
+
+.vibe-hero {
+  display: grid;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  min-height: calc(100vh - var(--header-height));
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(3rem, 6vw, 6rem) clamp(1.5rem, 4vw, 4rem);
+}
+
+.vibe-hero-copy {
+  max-width: 32rem;
+}
+
+.vibe-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.6rem;
+  padding: 0.42rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 32%, transparent);
+  border-radius: 999px;
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+}
+
+.vibe-hero-kicker::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.vibe-hero-title {
+  margin: 0 0 1.5rem;
+  color: var(--color-fg-bold);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.vibe-hero-lead {
+  margin: 0 0 1.5rem;
+  color: var(--color-fg);
+  font-size: clamp(1.08rem, 1.35vw, 1.26rem);
+  line-height: 1.78;
+  text-wrap: pretty;
+}
+
+.vibe-hero-meta {
+  margin: 0 0 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-fg-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.vibe-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+  padding: 0.92rem 1.6rem;
+  border-radius: 999px;
+  background: var(--color-fg-bold);
+  color: var(--color-bg);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.vibe-hero-cta svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.vibe-hero-cta:hover,
+.vibe-hero-cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.vibe-hero-cta:hover svg,
+.vibe-hero-cta:focus-visible svg {
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .vibe-hero-cta:hover,
+[data-theme="dark"] .vibe-hero-cta:focus-visible {
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5);
+}
+
+.vibe-hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vibe-hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: -8% -6%;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 68%);
+  filter: blur(36px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.vibe-hero-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+}
+
+.vibe-hero-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+[data-theme="dark"] .vibe-hero-frame {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== vibe coding · 取名 Agent 第二屏 ===== */
+.vibe-section {
+  display: grid;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  padding: clamp(4rem, 7vw, 7rem) clamp(1.5rem, 4vw, 4rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.vibe-section-copy {
+  max-width: 32rem;
+}
+
+.vibe-section-title {
+  margin: 0 0 1.5rem;
+  color: var(--color-fg-bold);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.vibe-section-lead {
+  margin: 0 0 1.5rem;
+  color: var(--color-fg);
+  font-size: clamp(1.02rem, 1.2vw, 1.15rem);
+  line-height: 1.78;
+  text-wrap: pretty;
+}
+
+.vibe-section-meta {
+  margin: 0 0 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-fg-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.vibe-section-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.92rem 1.6rem;
+  border-radius: 999px;
+  background: var(--color-fg-bold);
+  color: var(--color-bg);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.vibe-section-cta svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.vibe-section-cta:hover,
+.vibe-section-cta:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.vibe-section-cta:hover svg,
+.vibe-section-cta:focus-visible svg {
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .vibe-section-cta:hover,
+[data-theme="dark"] .vibe-section-cta:focus-visible {
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5);
+}
+
+.vibe-section-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vibe-section-visual::before {
+  content: "";
+  position: absolute;
+  inset: -8% -6%;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent 66%);
+  filter: blur(32px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.vibe-section-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+}
+
+.vibe-section-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vibe-section-img-placeholder {
+  border-radius: 16px;
+}
+
+[data-theme="dark"] .vibe-section-frame {
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+/* 第二屏图片：直接叠加，无组件样式 */
+.vibe-section-visual::before {
+  display: none;
+}
+
+.vibe-section-visual img {
+  display: block;
+  width: 110%;
+  height: auto;
+  margin-left: -50px;
+  margin-top: -20px;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+
+/* 首屏图片：直接叠加，无组件样式 */
+.vibe-hero-visual::before {
+  display: none;
+}
+
+.vibe-hero-visual img {
+  display: block;
+  width: 110%;
+  height: auto;
+  margin-left: -50px;
+  margin-top: -20px;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+
+/* 图片悬停放大动效 */
+.vibe-hero-visual img,
+.vibe-section-visual img {
+  transition: transform 0.4s var(--ease-out);
+}
+
+.vibe-hero-visual img:hover,
+.vibe-section-visual img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Prompt Make 专题页补充样式 ===== */
+/* 左侧图片占位（图片后续设计中替换） */
+.prompt-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: clamp(260px, 34vw, 440px);
+  padding: 2rem;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--trade-panel) 0 14px,
+    var(--trade-card) 14px 28px
+  );
+  color: var(--trade-soft);
+  text-align: center;
+}
+
+.prompt-placeholder--hero {
+  min-height: clamp(360px, 46vw, 620px);
+}
+
+.prompt-placeholder-label {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 1.1rem 1.6rem;
+  border: 1px dashed var(--trade-border);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--trade-panel) 86%, transparent);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.prompt-placeholder-hint {
+  font-size: 0.8rem;
+  color: var(--trade-soft);
+}
+
+/* 用户原始输入示例引用 */
+.trade-quote {
+  margin: 1.5rem 0 1.8rem;
+  padding: 1.1rem 1.3rem;
+  border-left: 3px solid var(--trade-accent, #1890ff);
+  border-radius: 0 10px 10px 0;
+  background: var(--trade-card);
+  color: var(--trade-muted);
+}
+
+.trade-quote p {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1rem, 1.18vw, 1.12rem);
+  line-height: 1.85;
+}
+
+.trade-quote p:last-child {
+  margin-bottom: 0;
+}
+
+/* 极短路径高亮 */
+.trade-path {
+  margin: 1.4rem 0 1.8rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--trade-border);
+  border-radius: 10px;
+  background: var(--trade-panel-soft);
+  color: var(--trade-text);
+  font-size: clamp(1.02rem, 1.2vw, 1.16rem);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* 场景化模板列表 */
+.trade-split-copy ul {
+  max-width: 46rem;
+  margin: 0 0 1.05rem;
+  padding-left: 1.2rem;
+  color: var(--trade-muted);
+  font-size: clamp(1.05rem, 1.28vw, 1.22rem);
+  line-height: 1.88;
+}
+
+.trade-split-copy ul li {
+  margin: 0 0 0.5rem;
+}
+
+.trade-split-copy ul li::marker {
+  color: var(--trade-accent, #1890ff);
+}
+
+/* 变量占位符内联代码 */
+.trade-split-copy code {
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--trade-border);
+  border-radius: 5px;
+  background: var(--trade-panel-soft);
+  font-size: 0.92em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Prompt Make 首屏动效（取自作品集首屏，无背景） */
+.prompt-make-hero-figure {
+  margin: 0;
+}
+
+.prompt-make-stage {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #eef4f7;
+}
+
+.prompt-make-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid var(--trade-border);
+  background: #fff;
+  box-shadow: 0 24px 70px var(--trade-shadow);
+}
+
+.trade-split-main .prompt-make-plugin {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  width: min(38%, 300px);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--trade-border);
+  background: #fff;
+  box-shadow: 0 22px 54px var(--trade-shadow);
+  pointer-events: none;
+}
+
+.prompt-make-status {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--trade-border);
+  background: color-mix(in srgb, var(--trade-panel) 92%, transparent);
+  color: var(--trade-muted);
+  font-size: 12px;
+  font-weight: 700;
 }

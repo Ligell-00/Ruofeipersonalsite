@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prompt Make 项目专题 | 陈若非</title>
+    <meta name="description" content="Prompt Make 项目专题：一款面向普通 AI 用户的 Chrome 浏览器插件，在 ChatGPT、Gemini、智谱、Deepseek、豆包、千问等输入框旁一键优化 Prompt。" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="case-study-body trade-split-body">
+    <div class="page-container">
+      <header class="site-header">
+        <a class="site-logo" href="index.html" aria-label="回到简历"><span class="logo-text">CRF</span></a>
+        <nav class="primary-nav nav-links" aria-label="一级导航">
+          <a class="nav-link" href="index.html">简历</a>
+          <a class="nav-link" href="product-cases.html">产品案例</a>
+          <a class="nav-link active" href="vibe-coding.html">vibe coding</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="切换为深色模式" title="切换为深色模式"><span class="theme-toggle-icon" aria-hidden="true">☾</span></button>
+          <button class="hamburger-button" type="button" aria-label="打开导航" aria-expanded="false"><span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+        </div>
+      </header>
+      <div class="slide-menu-overlay" hidden></div>
+      <aside class="slide-menu slide-menu--right" id="mobile-nav-menu" aria-hidden="true">
+        <nav aria-label="移动端导航">
+          <ul class="hamburger-ul">
+            <li><a href="index.html"><h3>简历</h3></a></li>
+            <li><a href="product-cases.html"><h3>产品案例</h3></a></li>
+            <li><a href="vibe-coding.html"><h3 class="index-li">vibe coding</h3></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="page-main trade-split-main">
+        <section class="trade-split-section trade-split-hero" aria-labelledby="prompt-make-title">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="prompt-make-hero-figure">
+              <div class="prompt-make-stage">
+                <video class="prompt-make-video" autoplay muted loop playsinline preload="metadata" aria-label="Prompt Make 在 Gemini 中的真实演示动效">
+                  <source src="assets/prompt-make-demo-gemini.mp4" type="video/mp4" />
+                  <source src="assets/prompt-make-demo-gemini.mov" type="video/quicktime" />
+                </video>
+                <img class="prompt-make-plugin" src="assets/prompt-make-plugin-popup.png" alt="Prompt Make 浏览器插件窗口" />
+                <span class="prompt-make-status">正在播放 Gemini 真实演示</span>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <h1 id="prompt-make-title">Prompt Make</h1>
+            <div class="trade-split-tags" aria-label="项目标签">
+              <span>Chrome 浏览器插件</span>
+              <span>普通 AI 用户</span>
+              <span>一键优化</span>
+              <span>场景化模板</span>
+              <span>Prompt 重构</span>
+            </div>
+            <p class="trade-split-lede">Prompt Make 是一款面向普通 AI 用户的 Chrome 浏览器插件。用户只需要在 ChatGPT、Gemini、智谱、Deepseek、豆包、千问等 AI 产品输入框中写下粗糙想法，点击输入框旁的「优化」按钮，即可将原始表达一键改写为结构清晰、目标明确、约束完整、可直接发送给 AI 的高质量 Prompt。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="positioning">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="trade-split-frame">
+              <div class="prompt-placeholder">
+                <span class="prompt-placeholder-label">
+                  示意图待补充
+                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
+                </span>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">01 / 项目定位</p>
+            <h2>让普通用户不必学习 Prompt Engineering，也能写出高质量提问</h2>
+            <p>很多用户的输入是这样的：</p>
+            <blockquote class="trade-quote">
+              <p>帮我写一篇小红书</p>
+              <p>帮我做一个方案</p>
+              <p>帮我优化一下这个需求</p>
+              <p>帮我生成一个设计说明</p>
+            </blockquote>
+            <p>这些表达虽然有意图，但缺少角色、背景、目标、约束、输出格式和质量标准，导致 AI 输出结果经常泛泛而谈，难以直接使用。</p>
+            <p>Prompt Make 解决的正是这个高频问题：</p>
+            <p><strong>在用户表达需求的第一现场，低成本完成一次 Prompt 结构化升级。</strong></p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="workflow">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="trade-split-frame">
+              <div class="prompt-placeholder">
+                <span class="prompt-placeholder-label">
+                  示意图待补充
+                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
+                </span>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">02 / 核心体验与工作流程</p>
+            <h2>Prompt Make 将 Prompt 优化流程压缩为一个极短路径：</h2>
+            <p class="trade-path">输入想法 → 点击优化 → 查看原文 / 优化后 → 替换到输入框 → 复制或收藏复用</p>
+            <p>Prompt Make 的 AI 工作流分为 5 个关键步骤：</p>
+            <p><strong>第一步：识别输入场景</strong></p>
+            <p>插件通过 content script 识别网页中的 可输入文本区域，并在用户聚焦输入框后显示「优化」入口。</p>
+            <p><strong>第二步：读取用户原始意图</strong></p>
+            <p>系统将用户输入作为原始 Prompt 数据，读取用户意图。</p>
+            <p><strong>第三步：匹配优化模式与场景模板</strong></p>
+            <p>根据用户输入的内容智能匹配通用、办公协作、电商、产品、设计师、自媒体写作 6 类场景，让不同任务进入不同的结构化优化路径。</p>
+            <p><strong>第四步：调用模型完成 Prompt 重写</strong></p>
+            <p>模型根据结构化优化规则，对原始表达补充角色、目标、背景、约束、输出格式和质量标准，同时保留用户原始意图，不编造事实，不执行任务。</p>
+            <p><strong>第五步：写回与复用</strong></p>
+            <p>用户可以将优化后的 Prompt 一键替换回原输入框，也可以复制、收藏或再次优化。历史记录与收藏机制让一次性 Prompt 优化沉淀为个人可复用的 Prompt 资产。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="ai-knowledge">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="trade-split-frame">
+              <div class="prompt-placeholder">
+                <span class="prompt-placeholder-label">
+                  示意图待补充
+                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
+                </span>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">03 / 运用的 AI 产品知识</p>
+            <h2>运用的 AI 产品知识</h2>
+            <p><strong>1. Prompt 结构化设计</strong></p>
+            <p>将用户的自然语言输入，重构为更适合大模型理解的任务说明，包括角色、背景、目标、限制条件、输出格式、质量标准等要素。</p>
+            <p><strong>2. 场景化 Prompt 模板</strong></p>
+            <p>不同用户场景需要不同的优化策略。例如：</p>
+            <ul>
+              <li>产品经理场景强调用户问题、方案边界、优先级和验收标准；</li>
+              <li>自媒体写作场景强调平台、读者、标题、正文结构、标签和互动引导；</li>
+              <li>电商场景强调商品信息、卖点、平台规则和转化目标；</li>
+              <li>设计师场景强调页面目标、视觉风格、交互状态和适配要求；</li>
+              <li>办公协作场景强调背景、目标、任务拆解、行动项和风险提示。</li>
+            </ul>
+            <p><strong>3. 意图保持与边界控制</strong></p>
+            <p>优化过程强调“只优化 Prompt，不执行任务”。这能有效避免模型偏离用户原始目的，也让插件的产品定位更清晰。</p>
+            <p><strong>4. 信息不足处理</strong></p>
+            <p>当用户原始输入缺少关键信息时，系统不直接编造，而是用“请补充：xxx”的方式提示用户完善信息，提升输出可信度。</p>
+            <p><strong>5. 变量保留机制</strong></p>
+            <p>对于包含 <code>{{变量}}</code> 的 Prompt，优化后必须逐字保留变量占位符，保证用户后续批量复用或模板化调用时不被破坏。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="features">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="trade-split-frame">
+              <div class="prompt-placeholder">
+                <span class="prompt-placeholder-label">
+                  示意图待补充
+                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
+                </span>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">04 / 核心功能亮点</p>
+            <h2>核心功能亮点</h2>
+            <p><strong>01 一键优化</strong></p>
+            <p>输入框聚焦后自动显示「优化」按钮，用户无需切换页面，即可完成 Prompt 改写。</p>
+            <p><strong>02 六大应用场景</strong></p>
+            <p>覆盖通用、办公协作、电商、产品、设计师、自媒体写作，让 Prompt 优化从“通用润色”升级为“场景化任务重构”。</p>
+            <p><strong>03 原文 / 优化后对比</strong></p>
+            <p>帮助用户理解优化前后的差异，增强结果可控性，也让用户在使用过程中逐步学习高质量 Prompt 的表达方式。</p>
+            <p><strong>04 替换、复制、再次优化</strong></p>
+            <p>围绕用户真实操作链路设计，既支持快速写回输入框，也支持进一步迭代。</p>
+            <p><strong>05 收藏与历史记录</strong></p>
+            <p>将高质量 Prompt 沉淀为个人资产，帮助用户从一次性提问走向长期复用。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="summary">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="trade-split-frame">
+              <div class="prompt-placeholder">
+                <span class="prompt-placeholder-label">
+                  示意图待补充
+                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
+                </span>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">05 / 项目总结</p>
+            <h2>用轻量插件验证 AI 产品的真实价值</h2>
+            <p>Prompt Make 的核心不是“做一个更复杂的 AI 工具”，而是用一个足够轻的产品形态，解决 AI 使用链路中最普遍、最高频、最容易被忽视的问题：</p>
+            <p><strong>用户不会问，AI 就很难答好。</strong></p>
+            <p>通过输入框内的一键优化、场景化 Prompt 重构和个人 Prompt 资产沉淀，Prompt Make 把 Prompt Engineering 从专业技巧转化为普通用户可感知、可操作、可复用的产品能力。</p>
+            <p>它让 AI 工具的使用门槛更低，也让每一次提问更接近高质量输出。</p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
