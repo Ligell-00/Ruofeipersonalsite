@@ -1,0 +1,176 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="a6706f7682304695b8270e7ae86f16a3" name="掌中宝交易OMS单据流转ER图_简洁无交叉版">
+    <mxGraphModel dx="1388" dy="1158" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="860" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E79;strokeColor=#1F4E79;fontColor=#FFFFFF;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" value="掌中宝交易 OMS｜单据流转 ER 图" vertex="1">
+          <mxGeometry height="44" width="1360" x="40" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_er" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontSize=15;fontStyle=1;fontColor=#0F172A;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;" value="一、核心单据关系" vertex="1">
+          <mxGeometry height="330" width="1360" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sec_status" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontSize=15;fontStyle=1;fontColor=#0F172A;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;" value="二、订单状态流转" vertex="1">
+          <mxGeometry height="380" width="1360" x="40" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="po" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="淘宝 / 天猫 平台订单" vertex="1">
+          <mxGeometry height="78" width="150" x="80" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="oms" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#DCFCE7;strokeColor=#86EFAC;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="掌中宝 OMS 交易主单" vertex="1">
+          <mxGeometry height="78" width="150" x="300" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="fulfill" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#FFEDD5;strokeColor=#FDBA74;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="履约单 / 包裹单 拆合单结果" vertex="1">
+          <mxGeometry height="78" width="150" x="520" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="pick" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#FFEDD5;strokeColor=#FDBA74;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="拣货单 拣货任务" vertex="1">
+          <mxGeometry height="78" width="150" x="740" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="ship" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#F3E8FF;strokeColor=#C084FC;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="发货单 / 物流单 面单与单号" vertex="1">
+          <mxGeometry height="78" width="150" x="960" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="back" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#F3E8FF;strokeColor=#C084FC;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="平台发货回传 订单状态更新" vertex="1">
+          <mxGeometry height="78" width="150" x="1180" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="inv" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#F3E8FF;strokeColor=#C084FC;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="库存流水 占用 / 扣减 / 回补" vertex="1">
+          <mxGeometry height="72" width="150" x="520" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="refund" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#FEE2E2;strokeColor=#FCA5A5;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="退款售后单 平台售后同步" vertex="1">
+          <mxGeometry height="72" width="150" x="300" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="return" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#FEE2E2;strokeColor=#FCA5A5;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="退货入库单 退货收货结果" vertex="1">
+          <mxGeometry height="72" width="150" x="740" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="refund_pay" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#FEE2E2;strokeColor=#FCA5A5;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;rounded=0;" value="退款单 退款结果" vertex="1">
+          <mxGeometry height="72" width="150" x="960" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="er1" edge="1" parent="1" source="po" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="oms" value="1:1 订单同步">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er2" edge="1" parent="1" source="oms" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="fulfill" value="1:N 拆单/合单">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er3" edge="1" parent="1" source="fulfill" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="pick" value="1:1 / 1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er4" edge="1" parent="1" source="pick" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="ship" value="1:N 拣货复核">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er5" edge="1" parent="1" source="ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="back" value="1:1 发货回传">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er6" edge="1" parent="1" source="fulfill" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="inv" value="生成占用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er7" edge="1" parent="1" source="oms" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="refund" value="1:N 售后申请">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er8" edge="1" parent="1" source="refund" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="return" value="退货退款">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="380" />
+              <mxPoint x="815" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="er9" edge="1" parent="1" source="return" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="refund_pay" value="确认后退款">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_unpaid" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="待付款&amp;nbsp;" vertex="1">
+          <mxGeometry height="82" width="150" x="80" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="W6Y7sPSM4E6bSbcupXUp-1" edge="1" parent="1" source="s_wait_ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="s_shipped">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="385" y="500" />
+              <mxPoint x="845" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W6Y7sPSM4E6bSbcupXUp-2" connectable="0" parent="W6Y7sPSM4E6bSbcupXUp-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=light-dark(#334255, #ededed);rounded=0;" value="整单发货/全部包裹发货" vertex="1">
+          <mxGeometry relative="1" x="-0.0027" y="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s_wait_ship" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="待发货" vertex="1">
+          <mxGeometry height="82" width="150" x="310" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="s_part" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="部分发货" vertex="1">
+          <mxGeometry height="82" width="150" x="540" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="s_shipped" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="已发货" vertex="1">
+          <mxGeometry height="82" width="150" x="770" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="s_review" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#10B981;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="待评价" vertex="1">
+          <mxGeometry height="82" width="150" x="1000" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="s_done" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#10B981;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="已完成" vertex="1">
+          <mxGeometry height="82" width="120" x="1230" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="s_closed" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="已关闭 未付款取消 / 超时关闭" vertex="1">
+          <mxGeometry height="62" width="150" x="80" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="W6Y7sPSM4E6bSbcupXUp-3" edge="1" parent="1" source="s_refund" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="s_refunded">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="385" y="760" />
+              <mxPoint x="1290" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W6Y7sPSM4E6bSbcupXUp-4" connectable="0" parent="W6Y7sPSM4E6bSbcupXUp-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=light-dark(#334255, #ededed);rounded=0;" value="仅退款" vertex="1">
+          <mxGeometry relative="1" x="0.0031" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s_refund" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="退款售后 售后入口" vertex="1">
+          <mxGeometry height="62" width="150" x="310" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="s_wait_return" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="待买家退货" vertex="1">
+          <mxGeometry height="62" width="150" x="540" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="s_returning" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="买家退货中" vertex="1">
+          <mxGeometry height="62" width="150" x="770" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="s_received" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="退货已收到" vertex="1">
+          <mxGeometry height="62" width="150" x="1000" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="s_refunded" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#111827;align=center;verticalAlign=middle;" value="已退款" vertex="1">
+          <mxGeometry height="62" width="120" x="1230" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="st1" edge="1" parent="1" source="s_unpaid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_wait_ship" value="买家付款">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st2" edge="1" parent="1" source="s_wait_ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_part" value="部分包裹出库">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st3" edge="1" parent="1" source="s_part" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_shipped" value="剩余包裹发出">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st4" edge="1" parent="1" source="s_shipped" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_review" value="确认收货">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st5" edge="1" parent="1" source="s_review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_done" value="评价 / 超时">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st6" edge="1" parent="1" source="s_unpaid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_closed" value="取消 / 超时">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st7" edge="1" parent="1" source="s_wait_ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_refund" value="申请退款/售后">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st8" edge="1" parent="1" source="s_refund" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_wait_return" value="退货退款">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st9" edge="1" parent="1" source="s_wait_return" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_returning" value="买家寄回">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st10" edge="1" parent="1" source="s_returning" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_received" value="商家签收">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="st11" edge="1" parent="1" source="s_received" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#334155;fontSize=12;fontColor=#334155;" target="s_refunded" value="退款完成">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -123,7 +123,10 @@ function currentSectionId(sections, offset) {
 
 function updateActiveLinks() {
   if (currentPage !== 'index.html') {
-    const activePage = currentPage.startsWith('case-') ? 'product-cases.html' : currentPage;
+    const vibeCodingPages = ['case-prompt-make.html', 'case-name-agent.html'];
+    const activePage = currentPage.startsWith('case-')
+      ? (vibeCodingPages.includes(currentPage) ? 'vibe-coding.html' : 'product-cases.html')
+      : currentPage;
     primaryLinks.forEach((link) => {
       const href = link.getAttribute('href');
       link.classList.toggle('active', href === activePage);

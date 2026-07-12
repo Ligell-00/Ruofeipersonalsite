@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>取名 Agent 项目专题 | 陈若非</title>
+    <meta name="description" content="取名 Agent 项目专题：面向中文取名场景的移动端对话式 AI 产品，通过场景识别、专业数据、规则校验与模型增强，提供结构化名字、五行分析与名字解析。" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .name-agent-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.1rem 0 1.5rem;
+        font-size: 0.94rem;
+        line-height: 1.6;
+      }
+      .name-agent-table th,
+      .name-agent-table td {
+        text-align: left;
+        padding: 0.7rem 0.9rem;
+        border: 1px solid var(--trade-border);
+        vertical-align: top;
+      }
+      .name-agent-table thead th {
+        background: var(--trade-card);
+        font-weight: 700;
+      }
+      .name-agent-table tbody tr:nth-child(even) td {
+        background: var(--trade-card);
+      }
+      .name-agent-table td:first-child {
+        font-weight: 600;
+      }
+      /* 本页模块配图：去掉浅色展示底座，直接展示示意图 */
+      .name-agent-section-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body class="case-study-body trade-split-body name-agent-page">
+    <div class="page-container">
+      <header class="site-header">
+        <a class="site-logo" href="index.html" aria-label="回到简历"><span class="logo-text">CRF</span></a>
+        <nav class="primary-nav nav-links" aria-label="一级导航">
+          <a class="nav-link" href="index.html">简历</a>
+          <a class="nav-link" href="product-cases.html">产品案例</a>
+          <a class="nav-link active" href="vibe-coding.html">vibe coding</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="切换为深色模式" title="切换为深色模式"><span class="theme-toggle-icon" aria-hidden="true">☾</span></button>
+          <button class="hamburger-button" type="button" aria-label="打开导航" aria-expanded="false"><span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+        </div>
+      </header>
+      <div class="slide-menu-overlay" hidden></div>
+      <aside class="slide-menu slide-menu--right" id="mobile-nav-menu" aria-hidden="true">
+        <nav aria-label="移动端导航">
+          <ul class="hamburger-ul">
+            <li><a href="index.html"><h3>简历</h3></a></li>
+            <li><a href="product-cases.html"><h3>产品案例</h3></a></li>
+            <li><a href="vibe-coding.html"><h3 class="index-li">vibe coding</h3></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="page-main trade-split-main">
+        <section class="trade-split-section trade-split-hero" aria-labelledby="name-agent-title">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="name-agent-hero-stage" aria-label="取名 Agent 产品动效与静态启动页展示">
+              <div class="name-agent-hero-showcase">
+                <div class="name-agent-device name-agent-device--static">
+                  <img src="assets/name-agent-container.png" alt="取名 Agent 手机端启动页" />
+                </div>
+                <div class="name-agent-device name-agent-device--motion">
+                  <div class="name-agent-video-viewport">
+                    <video src="assets/name-agent-demo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="取名 Agent 产品动效演示"></video>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <h1 id="name-agent-title">取名 Agent</h1>
+            <a class="name-agent-cta" href="https://name-agent-all7.onrender.com/prototype/index.html" target="_blank" rel="noopener noreferrer" aria-label="去体验取名 Agent 产品">去体验产品</a>
+            <p class="trade-split-lede">取名 Agent 是一款面向中文取名场景的移动端对话式产品</p>
+            <p>用户只需用自然语言描述需求，系统即可识别取名类型、提取关键信息、补齐缺失条件，并调用对应的专业 Skill，输出结构化的名字、五行分析或名字解析结果。</p>
+            <p>它不是让大模型自由生成名字，而是通过<strong>场景识别、专业数据、规则校验与模型增强</strong>，建立一套可控、可复用、可持续优化的垂直Agent。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="background">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-01-background.png" alt="取名 Agent 项目背景示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">01 / 项目背景</p>
+            <p>新手父母为了给宝宝取一个满意的名字，往往需要花费大量时间查资料、翻字典、找典故。如今的取名需求也越来越个性化，不仅要避免网红名，还要兼顾诗词出处、父母姓氏结合、手足关联、字义联动与五行适配等。</p>
+            <p>但通用大模型在五行判断、用字搭配和文化语境上仍不够稳定；传统线上取名服务则存在质量参差、价格较高、专业性难验证等问题。</p>
+            <p>取名 Agent 通过名字库、五行属性字库、场景化 Skill、规则校验与大模型协同，为用户提供更专业、可解释、可筛选的取名方案，帮助新手父母降低决策成本，更高效地找到兼具文化内涵与现代审美的好名字。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="positioning">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-02-positioning.png" alt="取名 Agent 产品定位示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">02 / 产品定位</p>
+            <p>取名Agent 是一款面向新手父母的对话式智能取名工具，通过结构化五行分析降低专业知识的理解门槛，以大模型拓展取名的创意空间，以专业数据库与规则体系保障结果质量，并由人工服务兜底，帮助用户更高效地获得兼具文化内涵、现代审美与个性表达的名字。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="design">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-03-design.png" alt="取名 Agent 核心设计思路示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">03 / 核心设计思路</p>
+            <p>取名 Agent 将系统能力拆分为四层：</p>
+            <h3>交互层</h3>
+            <p>通过推荐卡片与自然语言对话接收需求，减少复杂表单带来的使用压力。</p>
+            <h3>Agent 层</h3>
+            <p>负责意图识别、参数提取、缺失信息追问、上下文管理和 Skill 路由。</p>
+            <h3>专业能力层</h3>
+            <p>针对不同取名场景配置独立 Skill，分别定义所需信息、数据来源、生成规则与输出结构。</p>
+            <h3>数据与规则层</h3>
+            <p>通过名字库、五行属性字库、业务规则和结果校验，约束模型输出，保证结果可控。</p>
+            <p>这一设计让模型负责理解与表达，让数据和规则负责专业边界。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="dataflow">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-04-dataflow.png" alt="取名 Agent AI 数据工作流示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">04 / AI 数据工作流</p>
+            <p>取名 Agent 建立了一套从原始内容到专业名字库的数据生产流程。</p>
+            <h3>1. 收集原始案例</h3>
+            <p>数据来自内容运营、用户留言、历史取名方案及五行属性字表。</p>
+            <h3>2. AI 清洗与字段抽取</h3>
+            <p>大模型从非结构化文本中识别有效名字，并提取；同时完成去重、格式统一和无效内容过滤。</p>
+            <h3>3. 写入飞书多维表格</h3>
+            <p>清洗后的数据写入飞书数据库，用于筛选、标注、评分和人工复核。</p>
+            <p>飞书多维表格既是名字数据仓库，也是内容运营与质量管理后台。</p>
+            <h3>4. 人工复核并同步至 Agent</h3>
+            <p>通过人工检查字义、来源和审美质量，确认后的数据再同步为 Agent 可调用的名字库。</p>
+            <p>最终形成：</p>
+            <p class="trade-path">原始内容 → AI 清洗 → 结构化字段 → 飞书入库 → 人工复核 → Agent 调用</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="skills">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-05-skills.png" alt="取名 Agent 场景化 Skill 体系示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">05 / 场景化 Skill 体系</p>
+            <h2>不同取名需求，使用不同的方法与规则</h2>
+            <p>系统没有使用一个超长 Prompt 覆盖所有任务，而是按照用户真实需求拆分为独立 Skill。</p>
+            <table class="name-agent-table">
+              <thead>
+                <tr>
+                  <th>Skill</th>
+                  <th>核心规则</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>宝宝取名</td>
+                  <td>根据姓氏、性别、音形意和风格生成候选</td>
+                </tr>
+                <tr>
+                  <td>成人改名</td>
+                  <td>结合原名、改名原因与个人气质提供方案</td>
+                </tr>
+                <tr>
+                  <td>诗词取名</td>
+                  <td>校验诗词出处、语境与名字整体意象</td>
+                </tr>
+                <tr>
+                  <td>父母姓氏结合</td>
+                  <td>通过谐音、近音或字义关系融入母姓</td>
+                </tr>
+                <tr>
+                  <td>手足关联取名</td>
+                  <td>提取共用字，保持系列感并避免过度相似</td>
+                </tr>
+                <tr>
+                  <td>五行分析与取名</td>
+                  <td>区分“只分析”与“按喜用神取名”两种任务</td>
+                </tr>
+                <tr>
+                  <td>名字解析</td>
+                  <td>从音、形、意、雅和五行风险进行分析</td>
+                </tr>
+                <tr>
+                  <td>小名与英文名</td>
+                  <td>关注亲昵感、发音、气质与中文名关联</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Skill 化设计可以减少规则冲突，并支持独立测试、快速调整和持续扩展。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="synergy">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-06-synergy.png" alt="取名 Agent 名字库属性字库与大模型协同示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">06 / 名字库、属性字库与 DeepSeek 的协同</p>
+            <h2>检索优先，生成补充，规则兜底</h2>
+            <p>取名结果由三类能力共同完成。</p>
+            <h3>名字库</h3>
+            <p>保存经过清洗和人工筛选的优质名字案例，包括寓意、性别、五行、风格、来源、适用场景和风险标签。</p>
+            <h3>五行属性字库</h3>
+            <p>分别维护金、木、水、火、土属性用字。当用户指定喜用神时，系统先限定可用汉字，再进行组合与语义判断。</p>
+            <h3>DeepSeek</h3>
+            <p>主要负责：</p>
+            <ul>
+              <li>理解用户自然语言；</li>
+              <li>识别意图并提取参数；</li>
+              <li>在限定字库和规则下扩展候选；</li>
+              <li>生成统一、自然的寓意说明。</li>
+            </ul>
+            <p>这种方式让专业数据保证取名效果，让大模型提升组合空间与表达质量。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="useflow">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-07-useflow.png" alt="取名 Agent 用户使用流程示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">07 / 用户使用流程</p>
+            <h3>Step 1：描述需求</h3>
+            <p>用户可以选择推荐场景，也可以直接输入自然语言，例如：</p>
+            <blockquote class="trade-quote">
+              <p>姓江，女孩，希望名字有自然意境，简单大方，不要网红感。</p>
+            </blockquote>
+            <h3>Step 2：识别意图与参数</h3>
+            <p>系统判断用户属于普通取名、诗词取名、五行分析或其他场景，并提取姓氏、性别、生辰、喜用神、父母姓氏、手足名字和风格偏好等信息。</p>
+            <h3>Step 3：补齐必要条件</h3>
+            <p>当信息不足时，Agent 根据当前 Skill 继续追问，而不是直接猜测。</p>
+            <h3>Step 4：调用 Skill</h3>
+            <p>系统加载对应规则，检索名字库或属性字库，必要时调用 DeepSeek 扩展候选。</p>
+            <h3>Step 5：校验并输出</h3>
+            <p>系统检查结果是否满足五行、共用字、母姓近音、避讳、去重和额度规则，再输出统一的名字卡片。</p>
+            <h3>Step 6：继续筛选</h3>
+            <p>用户可以继续生成、放宽限制、按喜用神取名、查看历史记录或联系人工定制。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="result">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-08-result.png" alt="取名 Agent 结构化结果设计示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">08 / 结构化结果设计</p>
+            <p>取名 Agent 不直接展示大段模型文本，而是将结果统一转换为结构化数据。</p>
+            <p>每张名字卡片包含：</p>
+            <ul>
+              <li>完整姓名</li>
+              <li>取名方法或来源</li>
+              <li>寓意说明</li>
+              <li>风格标签</li>
+              <li>五行组合</li>
+              <li>必要的风险提示</li>
+            </ul>
+            <p>五行分析包含八字、五行数量、整体判断、用神、喜神和喜用元素。</p>
+            <p>名字解析包含音、形、意、雅、名字五行、适配风险和综合建议。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="business">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-09-business.png" alt="取名 Agent 商业与交付设计示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">09 / 商业与交付设计</p>
+            <h2>免费体验、按量付费与人工定制分层</h2>
+            <p>产品将服务分为三层：</p>
+            <h3>免费体验</h3>
+            <p>五行分析、名字解析、小名推荐和英文名推荐，用于降低首次体验门槛。</p>
+            <h3>AI 标准交付</h3>
+            <p>正式中文取名按照实际展示的名字数量扣减额度，而不是按对话次数收费。</p>
+            <h3>人工定制</h3>
+            <p>复杂命理、家族避讳、人工复核和最终定稿，由一对一服务承接。</p>
+            <p>这种分层既能控制低价商品的交付成本，也为高价值服务保留转化路径。</p>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="outcome">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <img class="name-agent-section-img" src="assets/case-name-agent-10-outcome.png" alt="取名 Agent 当前成果与后续方向示意" />
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">10 / 当前成果与后续方向</p>
+            <p>当前 MVP 已完成：</p>
+            <ul>
+              <li>移动端对话式取名界面；</li>
+              <li>多场景意图识别与参数抽取；</li>
+              <li>8 类专业 Skill；</li>
+              <li>名字库与五行属性字库；</li>
+              <li>DeepSeek 可选增强与本地规则兜底；</li>
+              <li>名字、五行和解析结果结构化输出；</li>
+              <li>再生成去重、套餐额度与人工定制入口；</li>
+              <li>Node.js API 与 Render 自动部署。</li>
+            </ul>
+            <p>后续重点包括：</p>
+            <ul>
+              <li>将套餐、额度和历史记录迁移至服务端；</li>
+              <li>建立收藏、对比与最终选名流程；</li>
+              <li>将用户反馈回流至飞书数据库；</li>
+              <li>网红名查重、流行趋势分析</li>
+              <li>取名攻略分享、文化传播</li>
+              <li>建立名字质量评测体系；</li>
+              <li>建设商家管理后台与订单交付力。</li>
+              <li>名字绘本定制服务</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="trade-split-section" id="summary">
+          <div class="trade-split-visual trade-split-visual--sticky">
+            <figure class="trade-split-frame">
+              <img class="name-agent-section-img" src="assets/name-agent-summary.png" alt="取名 Agent 项目总结展示图" />
+            </figure>
+          </div>
+          <article class="trade-split-copy">
+            <p class="trade-section-label">项目总结</p>
+            <p>取名Agent 是我的第一个 AI 产品项目，灵感来源于我在小红书进行取名内容分享时，对用户需求和交付痛点的观察。</p>
+            <p>通过这个项目，我将内容经验、名字库、五行属性字库、场景化 Skill 与大模型能力结合起来，完成了从需求识别、结果生成到套餐交付和人工服务承接的产品闭环，也验证了 AI 在低客单价服务自动化中的商业价值。</p>
+            <p>对我个人而言，这个项目不仅是一次产品落地实践，也帮助我系统建立了对 AI 产品设计的理解，包括数据清洗、知识结构化、Prompt 与 Skill 设计、模型调用、规则校验和结果评测等能力，为后续深入探索垂直场景 AI 产品打下了基础。</p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

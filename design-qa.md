@@ -448,3 +448,225 @@ Passed checks:
 - 产品案例页已将“掌中宝促销”与“掌中宝商品”交换位置，顺序调整为交易、促销、商品、工具吧、多卖宝。
 - 五个项目的首行说明已按批注更新，删除或替换了逗号后的延展描述。
 - 产品案例页圆形项目图片默认恢复为彩色展示，悬停仍保留放大和阴影反馈。
+
+---
+
+## 2026-07-10 Prompt Make 专题页配图补充
+
+Checked scope: `case-prompt-make.html`, `styles.css`, `assets/prompt-make-*.png`.
+
+Passed checks:
+
+- 已将 5 张 Prompt Make 介绍图复制为正式页面资产，统一放入 `assets/`。
+- `01 / 项目定位` 左侧使用信息架构图，帮助说明插件产品形态与核心模块。
+- `02 / 核心体验与工作流程` 左侧使用 Prompt 优化工作流图，对应右侧 5 步流程说明。
+- `03 / 运用的 AI 产品知识` 左侧使用应用场景规则图，对应场景化 Prompt 模板说明。
+- `04 / 核心功能亮点` 左侧使用核心功能亮点图，对应一键优化、模式、对比、收藏与历史。
+- `05 / 项目总结` 左侧使用技术架构与数据流图，补充轻量插件、数据本地化与流程闭环证据。
+
+---
+
+## 2026-07-10 Prompt Make 首屏 GitHub 链接
+
+Checked scope: `case-prompt-make.html`, `styles.css`.
+
+Passed checks:
+
+- 首屏原项目标签已替换为 GitHub 项目链接。
+- 链接指向 `https://github.com/Ligell-00/PromptMake`，并使用新窗口打开与 `noopener noreferrer`。
+- 按钮包含 GitHub 图标与“去 GitHub 查看项目”文案，样式限定在 Prompt Make 专题页，不影响其他案例页标签。
+
+---
+
+## 2026-07-10 Prompt Make 首屏动效对照替换
+
+Checked scope: `case-prompt-make.html`, `styles.css`, `assets/prompt-make-real-*.mov`.
+
+Passed checks:
+
+- 首屏左侧动效区已替换为对照页的标签切换、视频视口和播放状态结构。
+- 已补充 Gemini、chatGPT、deepseek、豆包 4 个真实演示视频资源，并支持点击标签切换与播放结束自动轮播。
+- 首屏左侧动效整体放大约 20%，从偏小的展示调整为更饱满的视觉比例。
+- 已移除视频视口右上角插件卡片叠层，压缩左侧图形整体高度，并让首屏左侧动效顶部与右侧文案顶部对齐。
+- 已增大首屏左右栏间距，并将左侧动效放大后的溢出方向向左释放，避免视频视口贴近右侧文案。
+- 动效样式均通过 `.prompt-make-page` 页面级 class 限定，不改动全站图片规则和其他页面。
+
+---
+
+## 2026-07-10 Prompt Make 项目定位产品界面补充
+
+Checked scope: `case-prompt-make.html`, `styles.css`, `assets/prompt-make-ui-*.png`.
+
+Passed checks:
+
+- `01 / 项目定位` 左侧新增插件设置界面与优化结果面板两张产品界面图，作为真实产品证据。
+- 原信息架构图位置已替换为“让普通用户也能写出高质量 Prompt”的产品价值图，并保留在产品界面组合下方。
+- 新增排版使用上方双界面同排展示、下方架构图的纵向结构，界面图保留主体内容，仅轻微裁切最外侧边框像素，样式限定在 `.prompt-make-page`。
+- Prompt Make 页面下方所有证据图片统一使用浅色展示底座，包含细边框、柔和背景、圆角和轻阴影。
+
+---
+
+## 2026-07-10 Prompt Make 章节标题层级互换
+
+Checked scope: `styles.css`, `case-prompt-make.html`.
+
+Passed checks:
+
+- Prompt Make 页内所有模块的章节编号标签视觉样式已切换为原章节标题的大标题层级。
+- Prompt Make 页内所有模块的章节标题已调整为深色中标题层级，字号高于正文但低于章节编号大标题。
+- 模块标题不再强制英文全大写，保留文案中的首字母大写形式。
+- 改动通过 `.prompt-make-page` 限定，仅影响当前专题页，不影响网站其他页面。
+
+---
+
+## 2026-07-10 Prompt Make 项目定位文案调整
+
+Checked scope: `case-prompt-make.html`.
+
+Passed checks:
+
+- `01 / 项目定位` 已改为 `01/项目背景与定位`。
+- 项目定位章节中“Prompt Make 解决的正是这个高频问题”前的段落已替换为来自 trae、workbuddy 输入框提示词增强 icon 的产品灵感说明。
+
+---
+
+## 2026-07-10 Prompt Make 工作流与 AI 技术章节标题调整
+
+Checked scope: `case-prompt-make.html`.
+
+Passed checks:
+
+- `02 / 核心体验与工作流程` 已改为 `02/Prompt优化工作流`。
+- `03 / 运用的 AI 产品知识` 已改为 `03/AI技术实现与规划`。
+- 已删除 `03` 章节下方重复的 `运用的 AI 产品知识` 小标题。
+- 已删除 `04` 章节下方重复的 `核心功能亮点` 小标题。
+
+---
+
+## 2026-07-10 Prompt Make AI 技术章节配图替换
+
+Checked scope: `case-prompt-make.html`.
+
+Passed checks:
+
+- `03/AI技术实现与规划` 左侧配图已由应用场景规则图替换为技术架构与数据流图。
+- 替换仅修改当前章节这一处图片引用，未影响其他图片展示规则。
+
+---
+
+## 2026-07-10 Prompt Make 项目总结配图替换
+
+Checked scope: `case-prompt-make.html`, `assets/prompt-make-summary-demo.png`.
+
+Passed checks:
+
+- `05 / 项目总结` 左侧配图已替换为 Gemini 页面中的 Prompt Make 优化演示图。
+- 新图已复制为正式页面资产 `assets/prompt-make-summary-demo.png`，未改动其他章节配图。
+
+---
+
+## 2026-07-10 取名 Agent 首屏素材展示
+
+Checked scope: `case-name-agent.html`, `styles.css`, `assets/name-agent-demo.mp4`, `assets/name-agent-container.png`.
+
+Passed checks:
+
+- 取名 Agent 专题页首屏左侧占位图已替换为视频动效与静态启动页横排展示。
+- 视频使用 `autoplay`、`muted`、`loop`、`playsinline`，可在首屏自动播放。
+- 样式通过 `.name-agent-page` 限定，仅影响当前专题页首屏。
+
+Follow-up adjustment:
+
+- 去除首屏左侧素材外层展示底座，改为静态图在左、视频在右的直接横排展示。
+
+Second adjustment:
+
+- 首屏左侧素材组重新加入浅色底座，仅作用于当前首屏素材区域。
+- 静态图与动效图统一为同宽横排、底部对齐；右侧视频加入 Prompt Make 首屏风格的圆角矩形外框。
+- 视频通过圆角框裁切上下边缘，去除画面中的黑色横条。
+
+Final adjustment:
+
+- 静态图与视频图统一使用 `466 / 920` 画幅比例，保证同宽时等高。
+- 视频通过上移 30px 并增加 60px 高度，由外框裁切上下黑边，避免裁掉主体内容。
+
+Title hierarchy adjustment:
+
+- 取名 Agent 页面模块编号标签已调整为 Prompt Make 同类页面的大标题样式。
+- 模块内 `h2` 标题已调整为较小标题样式，字号高于正文但低于编号标签。
+
+Summary image update:
+
+- 取名 Agent 页面最后的项目总结区域已替换为正式项目总结展示图 `assets/name-agent-summary.png`。
+
+Hero CTA update:
+
+- 取名 Agent 首屏标题下方已新增“立即使用”按钮，链接到线上原型地址。
+
+---
+
+## 2026-07-11 掌中宝促销 P7 文案替换
+
+Checked scope: `case-promo.html`, `styles.css`.
+
+Passed checks:
+
+- 掌中宝促销正文已按 `素材/促销素材/掌中宝促销_项目介绍网站文案_P7重构版.md` 替换为 P7 重构版结构。
+- 中文标题、正文、列表与复盘内容均使用文档内容；仅章节编号标签中的英文说明为页面结构补充。
+- 左侧关键指标已调整为文档中的 `40W+ 用户｜3W+ 付费用户｜45% 续费率`。
+- 章节继续复用现有 `case-meta-label`、`case-story-section`、`case-lede` 等文字样式。
+
+Notes:
+
+- 本轮未通过浏览器做视觉截图验证，仅完成代码层级与旧文案残留检查。
+
+---
+
+## 2026-07-11 掌中宝促销左侧作品展示资产
+
+Checked scope: `case-promo.html`, `styles.css`, `assets/promo/promo-left-showcase.png`, `assets/promo/promo-left-showcase.gif`.
+
+Passed checks:
+
+- 基于促销作品集 PDF 与四张界面截图生成左侧作品展示动效图，覆盖产品矩阵、创建流程、私域承接、抽奖互动、数据复盘五个状态。
+- `case-promo.html` 左侧占位图已替换为 `assets/promo/promo-left-showcase.gif`，并保留静态 poster `assets/promo/promo-left-showcase.png` 作为资产备份。
+- 三项关键指标已适配为三列展示，避免旧四列布局留下空位。
+- GIF 关键帧已抽样检查，未发现空白帧、主体裁切丢失或明显错位。
+
+Notes:
+
+- 本轮未通过 in-app browser 做页面截图验证；浏览器侧 `file://` 检查此前受安全策略限制。
+
+---
+
+## 2026-07-12 掌中宝促销真实截图静态展示图
+
+Checked scope: `case-promo.html`, `styles.css`, `assets/promo/`.
+
+Passed checks:
+
+- 已按要求停用自生成动效展示图，页面不再引用 `promo-left-showcase.gif` 或 `promo-section-lottery.gif`。
+- 首屏与各章节左侧图已替换为作品集 PDF 页面或真实后台界面截图裁切图。
+- 所有促销展示图统一输出为 1280 x 720 静态 PNG，保持页面展示比例一致。
+- 已移除促销页抽奖展示图的 motion 专用类，避免继续使用动效语义。
+
+Notes:
+
+- 本轮通过本地静态检查和资产拼图抽查确认图片来源与裁切效果；未通过 in-app browser 做页面截图验证。
+
+---
+
+## 2026-07-11 掌中宝促销分段左侧展示图
+
+Checked scope: `case-promo.html`, `styles.css`, `assets/promo/`.
+
+Passed checks:
+
+- 掌中宝促销页已从首屏单张展示，调整为分段图文结构，每个正文章节左侧均有对应展示图。
+- 已为项目概览、产品战略规划、私域互动营销升级、抽奖模块全流程改版、项目成果、项目复盘分别接入独立视觉资产。
+- 抽奖模块展示已改用 `promo-section-lottery.png` 静态截图，覆盖奖品设置、活动配置与右侧移动端预览。
+- 移动端使用单列阅读结构，左侧视觉取消 sticky，避免小屏图文挤压。
+
+Notes:
+
+- 本轮未通过 in-app browser 做页面截图验证；浏览器侧 `file://` 检查此前受安全策略限制。

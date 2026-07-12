@@ -6,6 +6,69 @@
     <title>掌中宝交易项目案例 | 陈若非</title>
     <meta name="description" content="陈若非主导掌中宝交易 OMS 的产品案例：从 0-1 MVP、复杂订单系统、核心链路优化到商业化闭环。" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .trade-pain-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: var(--spacing-4) 0;
+        font-size: var(--text-sm);
+      }
+      .trade-pain-table th {
+        text-align: left;
+        padding: var(--spacing-2) var(--spacing-3);
+        background: var(--color-accent-light);
+        color: var(--color-fg-bold);
+        font-weight: var(--font-weight-medium);
+        border-bottom: 1px solid var(--color-border);
+        white-space: nowrap;
+      }
+      .trade-pain-table td {
+        padding: var(--spacing-2) var(--spacing-3);
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-fg);
+        vertical-align: top;
+        line-height: var(--leading-normal);
+      }
+      .trade-pain-table td:first-child {
+        font-weight: var(--font-weight-medium);
+        color: var(--color-fg-bold);
+        white-space: nowrap;
+      }
+      .trade-pain-table tr:last-child td {
+        border-bottom: none;
+      }
+      .trade-split-copy ol,
+      .trade-split-copy ul {
+        margin: var(--spacing-3) 0;
+        padding-left: var(--spacing-5);
+      }
+      .trade-split-copy ol li,
+      .trade-split-copy ul li {
+        margin-bottom: var(--spacing-2);
+        line-height: var(--leading-normal);
+        color: var(--color-fg);
+      }
+      .trade-split-copy blockquote {
+        margin: var(--spacing-3) 0;
+        padding: var(--spacing-3) var(--spacing-4);
+        background: var(--color-bg-alt);
+        border-left: 3px solid var(--color-accent);
+        border-radius: var(--radius-xs);
+      }
+      .trade-split-copy blockquote p {
+        margin: 0;
+        line-height: var(--leading-normal);
+        color: var(--color-fg);
+      }
+      .trade-case-sub {
+        display: block;
+        margin-top: var(--spacing-4);
+        margin-bottom: var(--spacing-2);
+        font-size: var(--text-md);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-fg-bold);
+      }
+    </style>
   </head>
   <body class="case-study-body trade-split-body">
     <div class="page-container">
@@ -52,17 +115,16 @@
           <article class="trade-split-copy">
             <h1 id="trade-case-title">掌中宝交易 OMS</h1>
             <div class="trade-split-tags" aria-label="项目标签">
-              <span>B2B SaaS</span>
-              <span>OMS</span>
-              <span>电商交易</span>
-              <span>千牛服务市场</span>
+              <span>B2B OMS</span>
+              <span>电商SAAS</span>
               <span>订单履约</span>
               <span>商业化增长</span>
               <span>复杂业务系统</span>
+              <span>千牛生态</span>
             </div>
-            <p class="trade-split-lede">面向淘宝 / 天猫中小商家的轻量化订单管理 SaaS，帮助商家在千牛生态内完成订单同步、订单处理、打单发货、拆合单、物流回传、售后协同与自动化履约，提升高频订单履约效率，并形成从免费获客到分层付费的商业化闭环。</p>
+            <p class="trade-split-lede">掌中宝交易OMS是一款面向淘宝 / 天猫中小商家的轻量化订单管理 SaaS。我作为产品负责人，主导产品从 0-1 构建到规模化增长，围绕订单履约主链路完成产品定位、核心链路优化、复杂业务抽象、差异化机会挖掘与商业化体系建设，最终实现 60W+ 用户、7.3W+ 付费用户、12% 转化率和 65% 续费率。</p>
             <div class="trade-split-metrics" aria-label="项目关键指标">
-              <span><strong>60W+</strong>用户规模</span>
+              <span><strong>60W+</strong>用户</span>
               <span><strong>7.3W+</strong>付费用户</span>
               <span><strong>65%</strong>续费率</span>
             </div>
@@ -72,16 +134,6 @@
         <section class="trade-split-section" id="overview">
           <div class="trade-split-visual trade-split-visual--sticky">
             <div class="trade-image-stack">
-              <figure class="trade-split-frame trade-split-frame--flow trade-split-frame--swimlane">
-                <button class="trade-lightbox-trigger" type="button" data-lightbox-src="assets/trade-oms/trade-oms-swimlane.png" data-lightbox-alt="掌中宝交易 OMS 淘宝天猫订单管理流程图" aria-label="放大查看掌中宝交易 OMS 订单管理流程图">
-                  <img src="assets/trade-oms/trade-oms-swimlane.png" alt="掌中宝交易 OMS 淘宝天猫订单管理流程图" />
-                </button>
-              </figure>
-              <figure class="trade-split-frame trade-split-frame--flow">
-                <button class="trade-lightbox-trigger" type="button" data-lightbox-src="assets/trade-oms/trade-oms-er-flow.png" data-lightbox-alt="掌中宝交易 OMS 单据流转 ER 图" aria-label="放大查看掌中宝交易 OMS 单据流转 ER 图">
-                  <img src="assets/trade-oms/trade-oms-er-flow.png" alt="掌中宝交易 OMS 单据流转 ER 图" />
-                </button>
-              </figure>
               <figure class="trade-split-frame">
                 <img src="assets/trade-oms/trade-hero-device-showcase.png" alt="掌中宝交易 PC 与移动端订单管理界面展示" />
               </figure>
@@ -90,213 +142,189 @@
           <article class="trade-split-copy">
             <p class="trade-section-label">01 / Product Overview</p>
             <h2>项目背景与产品概述</h2>
-            <p>多数竞品 ERP / 订单管理 OMS 产品倾向 PC 端、功能完整，但系统较重、学习和实施成本高，更适合中大型商家；平台基础工具上手快，但更多解决单点操作，难以支撑多店铺、多包裹、多物流、拆合单、售后退款等复杂场景。</p>
-            <p>基于这一判断，掌中宝交易没有选择做“大而全”的重型 ERP，而是定位为面向中小商家的轻量化 OMS。产品以订单履约主链路为切入点，优先解决商家每天最高频的看单、找单、核单、打单、发货和售后处理问题，再逐步延展到复杂履约、自动化能力和差异化付费场景。</p>
-            <p>掌中宝交易的核心价值是：在低学习成本的前提下，帮助中小商家更高效、更稳定地完成订单处理。</p>
-            <p>它不是单纯的订单列表工具，而是围绕履约链路建立的一套轻量订单管理系统，将平台订单、交易主订单 / 子订单、拣货单、发货单、快递单、售后单、退款单与库存流水串联起来，帮助商家在统一工作流中完成订单处理、发货履约、售后协同与数据回流，并逐步形成用户增长、付费转化和续费留存的商业闭环。</p>
+            <p>中小商家并不一定需要完整 ERP，但他们每天都需要高效、稳定、低成本地处理订单。</p>
+            <p>在项目早期，我观察到市场存在明显断层：一类是重ERP/ 重OMS系统，能力完整，但实施成本高、学习成本高、价格门槛高，并不适合大量中小商家快速上手；另一类是平台基础工具，操作简单，但在复杂订单处理、多物流、多售后、多店铺、多包裹等场景下能力不足。</p>
+            <p>因此，掌中宝交易的核心定位不是做"大而全 ERP"，而是围绕商家履约链路建立的一套轻量OMS系统。让中小商家在一个低学习成本的工具里完成日常订单处理，同时保留足够的业务深度来支持复杂经营场景。</p>
           </article>
         </section>
 
         <section class="trade-split-section" id="ownership">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-03.png" alt="掌中宝交易我的角色与核心成果" /></figure>
+            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-ownership-role.png" alt="掌中宝交易我的角色与核心成果" /></figure>
           </div>
           <article class="trade-split-copy">
             <p class="trade-section-label">02 / Ownership</p>
-            <h2>产品负责人职责：从定位、MVP 到规模化增长</h2>
-            <p>我在项目中承担产品负责人角色，是掌中宝交易的核心创始成员之一，覆盖从 0-1 到规模化增长的完整生命周期。</p>
-            <p><strong>产品战略与定位：</strong>判断市场断层，定义“轻量化、高效率、移动优先”的产品战略，明确不与重 ERP 正面对抗，而是聚焦中小商家高频履约场景。</p>
-            <p><strong>0-1 MVP 验证：</strong>主导基础订单管理能力上线，包括订单同步、订单列表、搜索筛选、状态管理、批量处理、打单发货与基础售后协同，并完成早期用户冷启动。</p>
-            <p><strong>复杂业务系统设计：</strong>梳理订单状态机、单据流转关系、履约与售后分支，推动平台订单、OMS 主单、包裹单、拣货单、发货单、库存流水和退款单之间的业务关系清晰落地。</p>
-            <p><strong>商业化与组织协同：</strong>设计免费版、黄金版、白金版功能分层，协调产品、设计、研发、客服、运营与平台接口资源，完成多版本并行推进、优先级决策和落地验收。</p>
+            <h2>我的角色与职责</h2>
+            <p><strong>我在项目中承担产品负责人角色，是掌中宝交易的核心创始成员之一。</strong></p>
+            <p>我的职责覆盖产品全生命周期：从市场判断、产品定位、MVP 验证，到搜索筛选、订单列表、拆合单、虚拟商品自动发货等核心能力建设；同时负责版本规划、优先级决策、跨团队协同和商业化体系设计。</p>
           </article>
         </section>
 
         <section class="trade-split-section" id="users">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-06.png" alt="掌中宝交易高频功能体验优化目标" /></figure>
+            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-personas.png" alt="掌中宝交易用户场景与核心痛点" /></figure>
           </div>
           <article class="trade-split-copy">
             <p class="trade-section-label">03 / Personas & Use Cases</p>
             <h2>用户、场景与核心痛点</h2>
-            <p><strong>新手 / 小商家：</strong>订单量不高，但缺少系统化订单处理经验，希望工具简单、好上手，能快速完成看单、打单、发货。核心诉求是低学习成本、快速处理、少出错。</p>
-            <p><strong>中小规模商家：</strong>每天有稳定订单，需要批量处理、快速筛选、统一发货、售后协同，开始关注效率和人工成本。核心诉求是批量处理、快速找单、信息清晰、操作路径短。</p>
-            <p><strong>多店铺 / 多品类商家：</strong>同时管理多个店铺或多个品类，涉及多包裹、多物流、预售现货、缺货、售后等场景。核心诉求是复杂订单规则、拆合单、状态同步和异常处理。</p>
-            <p><strong>虚拟商品商家：</strong>售卖卡密、链接、教程资料、虚拟服务等商品，更关注付款后自动发货和内容准确送达。核心诉求是减少人工客服、避免漏发错发、提升买家体验。</p>
+            <p><strong>核心用户：</strong>新手/小商家，中小规模商家，多店铺/多品类商家，垂直类目商家等</p>
+            <p><strong>用户痛点</strong></p>
+            <table class="trade-pain-table">
+              <thead>
+                <tr><th>痛点</th><th>具体表现</th><th>产品机会</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>找单慢</td><td>订单量多，搜索效率低</td><td>搜索筛选重构、批量搜索、快捷搜索</td></tr>
+                <tr><td>信息复杂</td><td>订单列表信息分散，判断决策时间成本高</td><td>订单列表重构、提高信息透传</td></tr>
+                <tr><td>操作复杂</td><td>打单、备注、复制、发货等动作分散</td><td>固定操作区、批量操作、常用操作配置</td></tr>
+                <tr><td>复杂履约难</td><td>多商品、多包裹、同买家多单、预售现货混合</td><td>拆单、合单、一单多包、库存校验</td></tr>
+                <tr><td>售后问题多</td><td>退款、退货、换货与发货流程交织</td><td>售后逆向分支，主线与异常分离</td></tr>
+                <tr><td>免费化冲击</td><td>平台基础能力增强，第三方工具价值被稀释</td><td>做平台覆盖不到的细分高价值能力</td></tr>
+              </tbody>
+            </table>
           </article>
         </section>
 
         <section class="trade-split-section" id="strategy">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-04.png" alt="掌中宝交易设计策略三部分" /></figure>
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-06.png" alt="掌中宝交易高频功能体验优化目标" /></figure>
+            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-strategy.png" alt="掌中宝交易战略判断" /></figure>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">04 / Product Strategy</p>
-            <h2>从高频履约切入，逐步走向自动化和分层商业化</h2>
-            <p><strong>0-1 阶段：</strong>MVP 没有追求完整 OMS，而是围绕最核心的订单处理链路构建：订单同步、订单列表、搜索筛选、状态管理、批量处理、打单发货、物流回传和基础售后协同。早期目标不是“功能多”，而是验证商家是否会在日常经营中持续使用。</p>
-            <p><strong>成长期：</strong>当产品完成基础可用后，增长重点从“功能可用”转向“使用效率”和“价值感知”。我重点优化搜索筛选、订单列表、批量操作、打单发货和拆合单能力，让商家日常处理订单更快、更稳、更少出错。</p>
-            <p><strong>成熟期：</strong>随着平台免费能力增强、竞品同质化加剧，单纯打单发货能力很容易被价格战削弱。我将重点转向平台基础工具覆盖不足、但商家付费意愿明确的细分场景，例如虚拟商品自动发货、自动化规则、个性化配置等。</p>
-            <p><strong>商业化：</strong>免费版降低试用门槛，黄金版面向有稳定订单规模、追求效率的商家，白金版面向高频使用和自动化需求强的商家。</p>
+            <p class="trade-section-label">04 / Strategy</p>
+            <h2>战略判断</h2>
+            <p>以订单履约为主链路，以效率提升为核心价值，以自动化与差异化场景作为付费增长点，构建面向中小商家的轻量 OMS。</p>
+            <p><strong>0-1 阶段：先验证高频刚需</strong></p>
+            <p>围绕最核心的订单处理链路构建：订单同步、订单列表、搜索筛选、状态机管理、批量处理、打单发货、物流跟踪、基础售后协同。</p>
+            <p><strong>成长期：优化核心链路，提升转化。</strong></p>
+            <p>重点放在搜索筛选、订单列表、批量操作、打单发货和拆合单能力，让商家在日常处理订单时更快、更稳、更少出错。</p>
+            <p><strong>成熟期：寻找差异化付费点</strong></p>
+            <p>将重点转向商家付费意愿明确的细分场景，例如虚拟商品自动发货、自动化提醒、个性化配置等。</p>
+            <p><strong>商业化：免费引流+分层付费。</strong></p>
+            <p>免费版：覆盖基础订单查看与基础处理。黄金版：面向有订单规模、追求效率的商家，提供批量处理、打单发货、订单筛选等能力。白金版：面向高频使用和自动化需求强的商家，提供高阶自动化、差异化能力与更强履约支持。</p>
           </article>
         </section>
 
         <section class="trade-split-section" id="system-design">
           <div class="trade-split-visual trade-split-visual--sticky">
             <div class="trade-image-stack">
-              <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-21.png" alt="订单管理个性化定制服务" /></figure>
-              <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-22.png" alt="复杂打单发货业务拆单合单" /></figure>
+              <figure class="trade-split-frame trade-split-frame--flow trade-split-frame--swimlane">
+                <button class="trade-lightbox-trigger" type="button" data-lightbox-src="assets/trade-oms/trade-oms-swimlane-v2.png" data-lightbox-alt="掌中宝交易 OMS 订单管理泳道图" aria-label="放大查看掌中宝交易 OMS 订单管理泳道图">
+                  <img src="assets/trade-oms/trade-oms-swimlane-v2.png" alt="掌中宝交易 OMS 订单管理泳道图" />
+                </button>
+              </figure>
+              <figure class="trade-split-frame trade-split-frame--flow">
+                <button class="trade-lightbox-trigger" type="button" data-lightbox-src="assets/trade-oms/trade-oms-er-flow-v2.png" data-lightbox-alt="掌中宝交易 OMS 单据流转 ER 图" aria-label="放大查看掌中宝交易 OMS 单据流转 ER 图">
+                  <img src="assets/trade-oms/trade-oms-er-flow-v2.png" alt="掌中宝交易 OMS 单据流转 ER 图" />
+                </button>
+              </figure>
             </div>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">05 / System Design</p>
-            <h2>为复杂履约设计清晰的业务系统</h2>
-            <p>掌中宝交易的核心不是页面，而是订单单据关系。平台交易订单是数据源头，掌中宝 OMS 交易主单承接商家处理视角，履约单 / 包裹单根据拆单、合单、物流规则生成，发货单 / 物流单关联电子面单、物流单号与发货状态，库存流水记录占用、扣减和回补，退款售后单承接仅退款、退货退款、换货等分支。</p>
-            <p>订单管理主线可以简化为：消费者下单 → 平台订单创建 → 掌中宝同步待付款订单 → 付款后进入待发货池 → 订单校验与拦截 → 拆合单与配仓 → 批量打单 → 获取电子面单 → 拣货 / 验货 / 复核 → 物流回传 → 平台状态更新 → 签收 / 交易成功 → 财务与数据看板沉淀。</p>
-            <p>我将售后、退款、退货入库和异常预警作为底部分支沉淀，不干扰履约主线。这样既能支持待付款、待发货、部分发货、已发货、售后、退款、关闭等状态分支，也能把拆单、合单、库存、物流、售后、财务等跨域关系串起来。</p>
+            <p class="trade-section-label">05 / System Thinking</p>
+            <h2>系统设计能力</h2>
+            <p><strong>为复杂履约设计清晰的业务系统</strong></p>
+            <p>OMS的难点不在于展示订单列表，而在于平台订单、包裹、库存、物流、售后和退款之间存在复杂关系。我通过单据流转和订单状态机关系，将履约主线与售后异常分支拆开，使系统既能支持复杂场景，又能保持商家侧高效操作。</p>
+            <p>订单状态机：待付款、待发货、部分发货、已发货、退款中、待评价、已完成、已关闭</p>
+            <p><strong>订单管理主线：</strong></p>
+            <blockquote><p>消费者下单 → 平台订单创建 → 掌中宝同步待付款订单 → 付款后进入待发货池 → 订单校验与拦截 → 拆合单与配仓 → 批量打单：发货单/快递单/拣货单 → 拣货/验货/复核 → 发货 → 物流跟踪 → 平台状态更新 → 签收 / 交易成功 → 财务与数据看板</p></blockquote>
+            <p>其中售后、退款、退货入库与异常预警作为底部分支沉淀，不干扰履约主线。</p>
           </article>
         </section>
 
-        <section class="trade-split-section" id="search">
+        <section class="trade-split-section" id="solution">
           <div class="trade-split-visual trade-split-visual--sticky">
             <div class="trade-image-stack">
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-07.png" alt="搜索筛选用户研究与反馈收集" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-08.png" alt="搜索项数据打点分析" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-13.png" alt="搜索筛选优化前后方案对比" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-14.png" alt="搜索筛选重要性排序和批量搜索" /></figure>
-            </div>
-          </div>
-          <article class="trade-split-copy">
-            <p class="trade-section-label">06 / Case Study 1</p>
-            <h2>重构高频找单体验</h2>
-            <p>商家订单量增长后，“找单”成为高频但低效的动作。用户可能通过订单号、物流单号、买家昵称、商品 ID、商品关键词、收件人、手机号、备注、退款状态、下单时间、预售状态等多种条件找单。原有搜索筛选项分组不清晰，优先级不一致，导致商家定位订单效率低。</p>
-            <p>我通过用户问卷、旺旺语音访谈、客服反馈、数据打点和竞品分析，重新判断搜索筛选项的重要性。高频项前置，同类输入框合并，批量搜索支持客服、仓库、售后一次定位多个订单，快捷搜索沉淀催发订单、赠品订单、今日发货等高频业务场景，搜索历史减少重复配置筛选条件。</p>
-            <div class="trade-result-strip trade-result-strip--split">
-              <span>搜索点击率提升 <strong>8.2%</strong></span>
-              <span>搜单平均时效提升 <strong>10.3%</strong></span>
-              <span>续订率提升 <strong>6.5%</strong></span>
-            </div>
-          </article>
-        </section>
-
-        <section class="trade-split-section" id="orders">
-          <div class="trade-split-visual trade-split-visual--sticky">
-            <div class="trade-image-stack">
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-17.png" alt="订单管理界面布局优化前后" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-18.png" alt="订单管理操作按钮移动到底部" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-19.png" alt="订单列表信息显示优化" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-20.png" alt="抽屉式设置窗口" /></figure>
-            </div>
-          </div>
-          <article class="trade-split-copy">
-            <p class="trade-section-label">07 / Case Study 2</p>
-            <h2>把订单列表升级为订单处理工作台</h2>
-            <p>订单列表是商家处理订单的核心工作台。原有列表中信息分散，操作按钮在顶部或分布不稳定，商家需要频繁滚动、跳转或打开详情页才能判断订单是否可处理。</p>
-            <p>我将搜索筛选模块与订单列表模块分区，采用栅格化布局提升页面清晰度；重新梳理订单状态、商品信息、买家信息、物流信息、合单标记和异常提醒，让关键判断前置；将批量发货、打印快递单、打印发货单、批量备注、快捷复制等高频操作固定在界面底部，避免商家在长列表中来回查找按钮。</p>
-            <p>按钮按高频动作和次级动作分级，订单信息显示、自动合单、风险预警等配置改为抽屉式，在不打断当前页面的前提下提供设置能力。订单列表从“信息展示页”升级为“订单处理工作台”。</p>
-          </article>
-        </section>
-
-        <section class="trade-split-section" id="fulfillment">
-          <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-22.png" alt="复杂打单发货业务拆单合单" /></figure>
-          </div>
-          <article class="trade-split-copy">
-            <p class="trade-section-label">08 / Case Study 3</p>
-            <h2>支持多包裹、多场景履约</h2>
-            <p>中小商家的订单并不总是“一单一包一物流”。常见复杂场景包括：同买家同地址多订单需要合并发货；一个订单包含多件商品，需要拆成多个包裹；预售商品与现货商品混在一个订单中；部分商品缺货，需要先发可发商品；售后退款可能发生在发货前、发货中或发货后。</p>
-            <p>如果系统只按平台订单处理，会导致发货、库存、物流和售后之间出现错配。我推动建立履约单 / 包裹单中间层，平台订单不直接等同于发货单，而是通过履约单承接拆合单结果。</p>
-            <p>系统支持相同买家、相同地址、同店铺订单合并为一个包裹发货，也支持多商品、多仓、预售现货混合、部分缺货等场景拆成多个包裹，配合库存 / WMS 和 TMS 完成库存校验、电子面单、物流回传和售后分支沉淀。</p>
-          </article>
-        </section>
-
-        <section class="trade-split-section" id="automation">
-          <div class="trade-split-visual trade-split-visual--sticky">
-            <div class="trade-image-stack">
+              <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-22.png" alt="复杂打单发货业务拆单合单" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-27.png" alt="自动发货团队分工" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-30.png" alt="自动发货列表设计方案" /></figure>
-            </div>
-          </div>
-          <article class="trade-split-copy">
-            <p class="trade-section-label">09 / Case Study 4</p>
-            <h2>在同质化竞争中挖掘差异化付费点</h2>
-            <p>在平台基础工具增强、竞品能力趋同的阶段，传统订单管理能力面临免费化和同质化压力。继续做“别人也有的打单发货”很难形成长期竞争壁垒。</p>
-            <p>我通过商户群、客服反馈和业务观察，发现虚拟商品自动发货这一类被平台基础工具覆盖不足、但商家付费意愿明确的场景。目标用户是售卖卡密、链接、教程资料、虚拟服务、电子资料等商品的商家，他们最怕人工发送内容带来的漏发、错发、延迟发货和售后催促。</p>
-            <p>产品方案围绕商品绑定发货内容、订单支付后自动触发、发货内容校验与记录、异常兜底机制和订单状态联动展开。它对商家减少人工客服成本，对买家提升收货体验，也为产品形成平台基础能力之外的细分竞争优势。</p>
-          </article>
-        </section>
-
-        <section class="trade-split-section" id="mobile">
-          <div class="trade-split-visual trade-split-visual--sticky">
-            <div class="trade-image-stack">
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-33.png" alt="移动端体验一致性和功能映射" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-38.png" alt="PC 与移动端订单信息统一" /></figure>
               <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-40.png" alt="移动端数据呈现优化" /></figure>
             </div>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">10 / Mobile & Multi-end</p>
-            <h2>发挥移动端优势，保持多端体验一致</h2>
-            <p>订单管理通常被认为是 PC 端高复杂度场景，但中小商家存在大量移动办公需求：客服临时查单、老板查看订单状态、仓库扫码发货、售后扫码退货、外出时处理紧急订单。</p>
-            <p>我的判断是：移动端不是 PC 的简单缩小版，而是掌中宝交易可以建立差异化体验的场景。因此我推动订单数据移动端重构，用更轻的信息层级展示关键订单状态、买家信息、商品信息、物流状态和异常提醒。</p>
-            <p>同时，扫码发货降低移动端输入成本，扫码退货让售后退货入库和核验更快捷；多端设计规范保证 PC、移动端和千牛场景下的体验感知一致，让商家在不同设备之间沿用同一套订单处理心智。</p>
-          </article>
-        </section>
-
-        <section class="trade-split-section" id="monetization">
-          <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-31.png" alt="掌中宝交易项目成果阶段数据" /></figure>
-          </div>
-          <article class="trade-split-copy">
-            <p class="trade-section-label">11 / Growth & Monetization</p>
-            <h2>从免费获客到分层付费的商业化闭环</h2>
-            <p>掌中宝交易的增长不是单纯依赖投放，而是围绕 AARRR 路径做产品化拆解：依托千牛服务市场入口和掌中宝商品已有用户基础完成拉新；新用户进入产品后，优先引导完成订单同步、订单筛选、打单发货等核心动作，让商家尽快感知产品价值。</p>
-            <p>留存来自订单履约、物流、售后和自动化处理的日常高频使用；变现来自那些能明确节省时间、减少人工、降低出错率的能力，包括批量处理、高阶筛选、打单发货、自动化能力和虚拟商品自动发货。</p>
-            <p>分层商业化不是按功能数量机械切分，而是按用户经营价值拆解付费点：免费版建立基础价值感，黄金版提升订单处理效率，白金版承接自动化、复杂履约和差异化能力。</p>
+            <p class="trade-section-label">06 / Solution</p>
+            <h2>核心方案</h2>
+            <p>我围绕订单履约主链路建立轻量 OMS 能力：通过搜索筛选和订单列表重构提升高频处理效率；通过履约单 / 包裹单模型支持拆单、合单、部分发货和多物流场景；通过虚拟商品自动发货挖掘差异化付费点；通过免费版、黄金版、白金版构建从获客、激活、转化到续费的商业化闭环。</p>
+            <span class="trade-case-sub">case 1：搜索筛选优化</span>
+            <p>研究方法：问卷、访谈、客服反馈、数据分析、竞品分析</p>
+            <p><strong>关键策略</strong></p>
+            <ol>
+              <li>按重要性重排搜索筛选项，将高频项目前置</li>
+              <li>同类搜索项做组合输入，减少输入框数量和视觉负担。</li>
+              <li>支持批量搜索</li>
+              <li>强化快捷搜索</li>
+              <li>展示搜索历史</li>
+            </ol>
+            <span class="trade-case-sub">case 2：订单列表优化</span>
+            <p>采用栅格化布局，优化订单信息显示，固定底部操作区，按钮分级，抽屉式设置窗口等优化策略，提升页面清晰度，提高操作效率。</p>
+            <p>订单列表从"信息展示页"升级为"订单处理工作台"。</p>
+            <span class="trade-case-sub">case 3：拆单、合单与复杂履约链路重构</span>
+            <p><strong>合单因子：</strong></p>
+            <p><strong>拆单因子：</strong></p>
+            <p><strong>关键方案</strong></p>
+            <p>建立履约单，通过履约单承接拆合单结果。</p>
+            <p>合单/拆单，根据合单拆单因子，商家设定适合的规则，可手动/自动拆合单</p>
+            <p><strong>与库存 / WMS 联动</strong><br />在发货前进行库存占用、可发校验、缺货判断，出库后完成库存扣减。</p>
+            <p><strong>与菜鸟TMS联动</strong><br />获取电子面单、生成物流单号，并完成物流状态回传。</p>
+            <span class="trade-case-sub">case 4：虚拟商品自动发货</span>
+            <p>我通过商户群、客服反馈和业务观察，发现一类被平台基础工具覆盖不足、但商家付费意愿明确的场景：虚拟商品自动发货。</p>
+            <p><strong>核心难点</strong><br />技术受限，不具备旺旺窗口自动发送消息的技术权限。</p>
+            <p><strong>推动权限申请与技术方案落地</strong><br />我通过多轮和千牛小二沟通，最终得到可以申请追单小程序的发布来获得旺旺消息自动发放的权限。并和团队沟通，快速安排项目进程与分工。</p>
+            <p><strong>商业价值</strong><br />虚拟商品自动发货不是简单增加一个功能，而是在竞争同质化背景下创造了新的差异化付费点。虚拟商品商家高频使用、付费意愿强、续费粘性高。</p>
+            <span class="trade-case-sub">case 5：移动端优势与多端一致性</span>
+            <p><strong>核心判断</strong><br />在同类产品移动端体验普遍较弱的背景下，移动端不是 PC 的简单缩小版，而是掌中宝交易可以建立差异化体验的场景。</p>
+            <p><strong>关键方向</strong></p>
+            <ol>
+              <li><strong>订单数据展示与重构，随时随地查看店铺运营情况</strong></li>
+              <li><strong>扫码发货/退货，</strong>发挥移动端操作优势，提高仓内操作效率</li>
+              <li>建立统一设计规范和组件库，保证 PC、移动端的体验感知一致</li>
+            </ol>
           </article>
         </section>
 
         <section class="trade-split-section" id="impact">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-31.png" alt="掌中宝交易项目成果阶段数据" /></figure>
+            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-impact.png" alt="掌中宝交易项目成果" /></figure>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">12 / Impact & Reach</p>
-            <h2>项目结果：规模、效率、商业化与组织沉淀</h2>
-            <p>掌中宝交易最终实现 60W+ 用户、7.3W+ 付费用户、12% 付费转化率和 65% 续费率，并成为公司核心业务的重要组成部分，所负责产品线营收占公司核心业务约 30%。</p>
-            <div class="trade-result-cards trade-result-cards--split">
-              <div>
-                <span>冷启动验证</span>
-                <strong>1 个月破 1W</strong>
-                <p>从 0-1 搭建订单管理产品，验证高频履约刚需。</p>
-              </div>
-              <div>
-                <span>核心链路优化</span>
-                <strong>提效约 50%</strong>
-                <p>重构搜索筛选、订单列表、拆单、合单等核心链路。</p>
-              </div>
-              <div>
-                <span>体验与转化</span>
-                <strong>满意度 +60%</strong>
-                <p>付费转化提升约 10%，移动端与自动化能力强化粘性。</p>
-              </div>
-            </div>
-            <p>组织层面，我管理产品与设计团队，协调 10+ 研发资源推进复杂项目落地，建立多端设计规范和组件化协作方式，形成从业务定位、MVP、链路优化、增长、商业化到差异化机会挖掘的完整产品方法论。</p>
+            <p class="trade-section-label">07 / Impact & Reach</p>
+            <h2>项目成果</h2>
+            <p><strong>产品成果</strong></p>
+            <p>掌中宝交易最终实现 60W+ 用户、7.3W+ 付费用户、月12%付费转化率、65% 续费率，并成为公司核心业务的重要组成部分，所负责产品线营收约占公司核心业务约 30%。</p>
+            <p><strong>工作成果</strong></p>
+            <ul>
+              <li>管理产品与设计团队，支持多条核心产品线。</li>
+              <li>协调10+研发资源推进复杂项目落地。</li>
+              <li>建立多端设计规范和组件化协作方式，提升设计与研发协同效率。</li>
+              <li>形成从业务定位、MVP、链路优化、增长、商业化到差异化机会挖掘的完整产品方法论。</li>
+            </ul>
           </article>
         </section>
 
         <section class="trade-split-section" id="learnings">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-work-42.png" alt="扫码打单发货退货设计方案" /></figure>
+            <figure class="trade-split-frame"><img src="assets/trade-oms/trade-learnings.png" alt="掌中宝交易策略沉淀与复盘" /></figure>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">13 / Strategic Learnings</p>
-            <h2>作为产品负责人，我沉淀的方法论</h2>
-            <p><strong>复杂 B 端产品要先抓主链路。</strong>OMS 的复杂度很高，但 0-1 阶段不能把所有复杂度一次性暴露给用户。我的策略是先抓订单履约主链路，再把售后、退款、库存、物流、财务等分支逐步纳入系统。</p>
-            <p><strong>轻量化不等于能力浅。</strong>中小商家需要的是低学习成本，而不是低能力。掌中宝交易的核心挑战，是把复杂的订单履约能力隐藏在清晰的交互和稳定的流程背后。</p>
-            <p><strong>数据、用户反馈和竞品分析要共同决策。</strong>搜索筛选改版不是单纯视觉优化，而是结合用户调研、客服反馈、打点数据和竞品对比后，对信息优先级和交互路径的重新设计。</p>
-            <p><strong>平台免费化不是终点。</strong>当平台基础能力变强时，第三方工具不能继续停留在基础能力复制，而要寻找平台覆盖不足、用户付费意愿更强的细分场景，如虚拟商品自动发货和自动化履约。</p>
-            <p>掌中宝交易对我而言，不只是一次 OMS 产品建设经历，更是一次从业务定位、复杂系统抽象、体验优化、增长转化到商业化闭环的完整产品实践。</p>
+            <p class="trade-section-label">08 / Strategic Learnings</p>
+            <h2>策略沉淀与复盘</h2>
+            <ol>
+              <li>复杂 B 端产品要先抓主链路</li>
+              <li>轻量化不等于能力浅</li>
+              <li>数据、用户反馈和竞品分析共同决策</li>
+              <li>平台免费化不是终点，而是重新寻找价值边界的开始</li>
+              <li>商业化要绑定用户真实经营价值</li>
+              <li>要把体验、业务和研发落地结合起来</li>
+            </ol>
           </article>
         </section>
       </main>

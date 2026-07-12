@@ -7,7 +7,7 @@
     <meta name="description" content="Prompt Make 项目专题：一款面向普通 AI 用户的 Chrome 浏览器插件，在 ChatGPT、Gemini、智谱、Deepseek、豆包、千问等输入框旁一键优化 Prompt。" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="case-study-body trade-split-body">
+  <body class="case-study-body trade-split-body prompt-make-page">
     <div class="page-container">
       <header class="site-header">
         <a class="site-logo" href="index.html" aria-label="回到简历"><span class="logo-text">CRF</span></a>
@@ -36,42 +36,50 @@
         <section class="trade-split-section trade-split-hero" aria-labelledby="prompt-make-title">
           <div class="trade-split-visual trade-split-visual--sticky">
             <figure class="prompt-make-hero-figure">
-              <div class="prompt-make-stage">
-                <video class="prompt-make-video" autoplay muted loop playsinline preload="metadata" aria-label="Prompt Make 在 Gemini 中的真实演示动效">
-                  <source src="assets/prompt-make-demo-gemini.mp4" type="video/mp4" />
-                  <source src="assets/prompt-make-demo-gemini.mov" type="video/quicktime" />
-                </video>
-                <img class="prompt-make-plugin" src="assets/prompt-make-plugin-popup.png" alt="Prompt Make 浏览器插件窗口" />
-                <span class="prompt-make-status">正在播放 Gemini 真实演示</span>
+              <div class="prompt-make-real-stage" aria-label="Prompt Make 真实案例动效演示">
+                <div class="prompt-make-real-toolbar" aria-label="AI 网页端切换">
+                  <button class="prompt-make-real-tab is-active" type="button" data-prompt-real-tab="Gemini">Gemini</button>
+                  <button class="prompt-make-real-tab" type="button" data-prompt-real-tab="chatGPT">chatGPT</button>
+                  <button class="prompt-make-real-tab" type="button" data-prompt-real-tab="deepseek">deepseek</button>
+                  <button class="prompt-make-real-tab" type="button" data-prompt-real-tab="豆包">豆包</button>
+                </div>
+                <div class="prompt-make-real-viewport">
+                  <video class="prompt-make-real-video" src="assets/prompt-make-real-gemini.mov" autoplay muted playsinline preload="metadata" aria-label="Prompt Make 在 Gemini 中的真实演示动效"></video>
+                  <span class="prompt-make-real-status">正在播放 Gemini 真实演示</span>
+                </div>
               </div>
             </figure>
           </div>
           <article class="trade-split-copy">
             <h1 id="prompt-make-title">Prompt Make</h1>
-            <div class="trade-split-tags" aria-label="项目标签">
-              <span>Chrome 浏览器插件</span>
-              <span>普通 AI 用户</span>
-              <span>一键优化</span>
-              <span>场景化模板</span>
-              <span>Prompt 重构</span>
-            </div>
+            <a class="prompt-make-github-link" href="https://github.com/Ligell-00/PromptMake" target="_blank" rel="noopener noreferrer" aria-label="去 GitHub 查看 Prompt Make 项目">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.52 2.87 8.35 6.84 9.7.5.09.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.37 9.37 0 0 1 12 6.96c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.2 10.2 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z" />
+              </svg>
+              <span>去 GitHub 查看项目</span>
+            </a>
             <p class="trade-split-lede">Prompt Make 是一款面向普通 AI 用户的 Chrome 浏览器插件。用户只需要在 ChatGPT、Gemini、智谱、Deepseek、豆包、千问等 AI 产品输入框中写下粗糙想法，点击输入框旁的「优化」按钮，即可将原始表达一键改写为结构清晰、目标明确、约束完整、可直接发送给 AI 的高质量 Prompt。</p>
           </article>
         </section>
 
         <section class="trade-split-section" id="positioning">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame">
-              <div class="prompt-placeholder">
-                <span class="prompt-placeholder-label">
-                  示意图待补充
-                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
-                </span>
+            <div class="prompt-make-positioning-visual" aria-label="Prompt Make 产品界面与信息架构">
+              <div class="prompt-make-interface-pair">
+                <figure class="prompt-make-ui-card prompt-make-ui-card--settings">
+                  <img src="assets/prompt-make-ui-settings.png" alt="Prompt Make 插件设置与应用场景选择界面" />
+                </figure>
+                <figure class="prompt-make-ui-card prompt-make-ui-card--result">
+                  <img src="assets/prompt-make-ui-result.png" alt="Prompt Make 优化提示词结果面板界面" />
+                </figure>
               </div>
-            </figure>
+              <figure class="trade-split-frame prompt-make-evidence prompt-make-evidence--architecture">
+                <img src="assets/prompt-make-positioning-value.png" alt="Prompt Make 让普通用户写出高质量 Prompt 的产品价值图" />
+              </figure>
+            </div>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">01 / 项目定位</p>
+            <p class="trade-section-label">01/项目背景与定位</p>
             <h2>让普通用户不必学习 Prompt Engineering，也能写出高质量提问</h2>
             <p>很多用户的输入是这样的：</p>
             <blockquote class="trade-quote">
@@ -81,24 +89,20 @@
               <p>帮我生成一个设计说明</p>
             </blockquote>
             <p>这些表达虽然有意图，但缺少角色、背景、目标、约束、输出格式和质量标准，导致 AI 输出结果经常泛泛而谈，难以直接使用。</p>
-            <p>Prompt Make 解决的正是这个高频问题：</p>
+            <p>我在使用 trae、workbuddy 等产品时输入框旁边有增强提示词的 icon，于是想到网页端大模型的输入框旁边是否也能跟进设计一个快捷点击优化提示词的功能呢？</p>
+            <p>于是有了 vibecoding 一款提示词优化产品的想法，Prompt Make 解决的正是这个高频问题：</p>
             <p><strong>在用户表达需求的第一现场，低成本完成一次 Prompt 结构化升级。</strong></p>
           </article>
         </section>
 
         <section class="trade-split-section" id="workflow">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame">
-              <div class="prompt-placeholder">
-                <span class="prompt-placeholder-label">
-                  示意图待补充
-                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
-                </span>
-              </div>
+            <figure class="trade-split-frame prompt-make-evidence">
+              <img src="assets/prompt-make-workflow.png" alt="Prompt Make 产品流程图与 Prompt 优化工作流" />
             </figure>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">02 / 核心体验与工作流程</p>
+            <p class="trade-section-label">02/Prompt优化工作流</p>
             <h2>Prompt Make 将 Prompt 优化流程压缩为一个极短路径：</h2>
             <p class="trade-path">输入想法 → 点击优化 → 查看原文 / 优化后 → 替换到输入框 → 复制或收藏复用</p>
             <p>Prompt Make 的 AI 工作流分为 5 个关键步骤：</p>
@@ -117,18 +121,12 @@
 
         <section class="trade-split-section" id="ai-knowledge">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame">
-              <div class="prompt-placeholder">
-                <span class="prompt-placeholder-label">
-                  示意图待补充
-                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
-                </span>
-              </div>
+            <figure class="trade-split-frame prompt-make-evidence">
+              <img src="assets/prompt-make-data-flow.png" alt="Prompt Make 技术架构与数据流图" />
             </figure>
           </div>
           <article class="trade-split-copy">
-            <p class="trade-section-label">03 / 运用的 AI 产品知识</p>
-            <h2>运用的 AI 产品知识</h2>
+            <p class="trade-section-label">03/AI技术实现与规划</p>
             <p><strong>1. Prompt 结构化设计</strong></p>
             <p>将用户的自然语言输入，重构为更适合大模型理解的任务说明，包括角色、背景、目标、限制条件、输出格式、质量标准等要素。</p>
             <p><strong>2. 场景化 Prompt 模板</strong></p>
@@ -151,18 +149,12 @@
 
         <section class="trade-split-section" id="features">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame">
-              <div class="prompt-placeholder">
-                <span class="prompt-placeholder-label">
-                  示意图待补充
-                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
-                </span>
-              </div>
+            <figure class="trade-split-frame prompt-make-evidence">
+              <img src="assets/prompt-make-feature-highlights.png" alt="Prompt Make 核心功能亮点图" />
             </figure>
           </div>
           <article class="trade-split-copy">
             <p class="trade-section-label">04 / 核心功能亮点</p>
-            <h2>核心功能亮点</h2>
             <p><strong>01 一键优化</strong></p>
             <p>输入框聚焦后自动显示「优化」按钮，用户无需切换页面，即可完成 Prompt 改写。</p>
             <p><strong>02 六大应用场景</strong></p>
@@ -178,13 +170,8 @@
 
         <section class="trade-split-section" id="summary">
           <div class="trade-split-visual trade-split-visual--sticky">
-            <figure class="trade-split-frame">
-              <div class="prompt-placeholder">
-                <span class="prompt-placeholder-label">
-                  示意图待补充
-                  <span class="prompt-placeholder-hint">左侧图片将在后续设计中替换</span>
-                </span>
-              </div>
+            <figure class="trade-split-frame prompt-make-evidence">
+              <img src="assets/prompt-make-summary-demo.png" alt="Prompt Make 在 Gemini 页面中的提示词优化演示图" />
             </figure>
           </div>
           <article class="trade-split-copy">
@@ -198,6 +185,55 @@
         </section>
       </main>
     </div>
+    <script>
+      (() => {
+        const stage = document.querySelector(".prompt-make-real-stage");
+        if (!stage) return;
+
+        const demos = [
+          { model: "Gemini", src: "assets/prompt-make-real-gemini.mov" },
+          { model: "chatGPT", src: "assets/prompt-make-real-chatgpt.mov" },
+          { model: "deepseek", src: "assets/prompt-make-real-deepseek.mov" },
+          { model: "豆包", src: "assets/prompt-make-real-doubao.mov" }
+        ];
+        const video = stage.querySelector(".prompt-make-real-video");
+        const status = stage.querySelector(".prompt-make-real-status");
+        const tabs = Array.from(stage.querySelectorAll("[data-prompt-real-tab]"));
+        let index = 0;
+
+        function renderDemo() {
+          const item = demos[index % demos.length];
+          tabs.forEach((tab) => {
+            tab.classList.toggle("is-active", tab.dataset.promptRealTab === item.model);
+          });
+          status.textContent = `正在播放 ${item.model} 真实演示`;
+          if (!video.getAttribute("src")?.endsWith(item.src)) {
+            video.src = item.src;
+            video.load();
+          }
+          const playPromise = video.play();
+          if (playPromise) playPromise.catch(() => {});
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const nextIndex = demos.findIndex((item) => item.model === tab.dataset.promptRealTab);
+            if (nextIndex < 0) return;
+            index = nextIndex;
+            renderDemo();
+          });
+        });
+
+        video.addEventListener("ended", () => {
+          index = (index + 1) % demos.length;
+          renderDemo();
+        });
+        video.addEventListener("error", () => {
+          status.textContent = "当前演示视频暂时无法播放，请切换其他标签";
+        });
+        renderDemo();
+      })();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
