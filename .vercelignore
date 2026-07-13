@@ -1,0 +1,9 @@
+.git
+.gitignore
+.DS_Store
+.workbuddy
+tmp
+素材
+design-qa.md
+AGENTS.md
+*.bkp
