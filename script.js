@@ -18,6 +18,74 @@ const lightboxCanvas = document.querySelector('.trade-lightbox-canvas');
 const lightboxImage = document.querySelector('.trade-lightbox-image');
 const lightboxClose = document.querySelector('.trade-lightbox-close');
 const lightboxTriggers = [...document.querySelectorAll('.trade-lightbox-trigger')];
+const splitCaseMedia = window.matchMedia('(min-width: 737px)');
+let splitCaseLayoutState = null;
+
+function enhanceSplitCaseLayout() {
+  const main = document.querySelector('.trade-split-main:not(.case-static-media-main)');
+  if (!main || splitCaseLayoutState || !splitCaseMedia.matches) return;
+
+  const sections = [...main.querySelectorAll(':scope > .trade-split-section')];
+  if (!sections.length) return;
+
+  const layout = document.createElement('div');
+  const rail = document.createElement('div');
+  const story = document.createElement('div');
+  const visualPairs = [];
+
+  layout.className = 'case-scroll-layout';
+  rail.className = 'case-scroll-rail';
+  story.className = 'case-scroll-story';
+
+  sections.forEach((section) => {
+    const visual = section.querySelector(':scope > .trade-split-visual');
+    if (visual) {
+      const item = document.createElement('div');
+      item.className = section.classList.contains('trade-split-hero')
+        ? 'case-scroll-visual-item case-scroll-visual-item--hero'
+        : 'case-scroll-visual-item';
+      item.append(visual);
+      rail.append(item);
+      visualPairs.push({ section, visual });
+    }
+    story.append(section);
+  });
+
+  layout.append(rail, story);
+  main.append(layout);
+  main.classList.add('case-scroll-enhanced');
+  splitCaseLayoutState = { main, layout, sections, visualPairs };
+}
+
+function restoreSplitCaseLayout() {
+  if (!splitCaseLayoutState) return;
+
+  const { main, layout, sections, visualPairs } = splitCaseLayoutState;
+  const fragment = document.createDocumentFragment();
+  const visualBySection = new Map(visualPairs.map(({ section, visual }) => [section, visual]));
+
+  sections.forEach((section) => {
+    const visual = visualBySection.get(section);
+    if (visual) section.insertBefore(visual, section.firstElementChild);
+    fragment.append(section);
+  });
+
+  main.append(fragment);
+  layout.remove();
+  main.classList.remove('case-scroll-enhanced');
+  splitCaseLayoutState = null;
+}
+
+function syncSplitCaseLayout() {
+  if (splitCaseMedia.matches) {
+    enhanceSplitCaseLayout();
+  } else {
+    restoreSplitCaseLayout();
+  }
+}
+
+syncSplitCaseLayout();
+splitCaseMedia.addEventListener?.('change', syncSplitCaseLayout);
 
 hoverCards.forEach((card) => {
   card.addEventListener('pointerenter', () => card.classList.add('is-hover'));
