@@ -1107,6 +1107,62 @@ body.menu-open {
   background: #f3f6fb;
 }
 
+.promo-split-main .promo-lottery-video-crop {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.promo-split-main .promo-lottery-video-crop video {
+  margin-bottom: -30px;
+  transform: translateY(-15px);
+  border-radius: 0;
+  background: transparent;
+}
+
+/* 横向自动无缝滚动帧（超宽长图） */
+.promo-split-main .promo-scroll-frame {
+  overflow: hidden;
+}
+
+.promo-split-main .promo-scroll-viewport {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1920 / 1306;
+  border-radius: 4px;
+  background: #f3f6fb;
+}
+
+.promo-split-main .promo-scroll-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  height: 100%;
+  animation: promo-hscroll 36s linear infinite;
+}
+
+.promo-split-main .promo-product-frame .promo-scroll-track img {
+  display: block;
+  width: auto;
+  height: 100%;
+  border-radius: 0;
+  flex: none;
+}
+
+.promo-split-main .promo-scroll-frame:hover .promo-scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes promo-hscroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-split-main .promo-scroll-track {
+    animation: none;
+  }
+}
+
 .promo-split-main .case-meta-label {
   max-width: 46rem;
 }
@@ -2856,6 +2912,19 @@ body.lightbox-open {
 .prompt-make-page .prompt-make-evidence img {
   border-radius: 12px;
   box-shadow: 0 18px 54px rgba(19, 43, 39, 0.08);
+}
+
+.prompt-make-page .prompt-make-edge-crop {
+  overflow: hidden;
+  border-radius: 12px;
+  line-height: 0;
+}
+
+.prompt-make-page .prompt-make-edge-crop img {
+  width: calc(100% + 4px);
+  max-width: none;
+  margin: -2px;
+  border-radius: 0;
 }
 
 .prompt-make-page .prompt-make-positioning-visual {
