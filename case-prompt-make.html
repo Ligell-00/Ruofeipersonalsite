@@ -13,8 +13,21 @@
         <a class="site-logo" href="index.html" aria-label="回到简历"><span class="logo-text">CRF</span></a>
         <nav class="primary-nav nav-links" aria-label="一级导航">
           <a class="nav-link" href="index.html">简历</a>
-          <a class="nav-link" href="product-cases.html">产品案例</a>
-          <a class="nav-link active" href="vibe-coding.html">vibe coding</a>
+          <div class="nav-dropdown">
+            <a class="nav-link" href="product-cases.html" aria-haspopup="true">产品案例</a>
+            <div class="nav-dropdown-menu" aria-label="产品案例">
+              <a class="nav-dropdown-link" href="case-trade-oms.html">掌中宝交易</a>
+              <a class="nav-dropdown-link" href="case-promo.html">掌中宝促销</a>
+              <a class="nav-dropdown-link" href="case-goods.html">掌中宝商品</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a class="nav-link active" href="vibe-coding.html" aria-haspopup="true">vibe coding</a>
+            <div class="nav-dropdown-menu" aria-label="Vibe Coding">
+              <a class="nav-dropdown-link active" href="case-prompt-make.html" aria-current="page">PromptMake</a>
+              <a class="nav-dropdown-link" href="case-name-agent.html">NameAgent</a>
+            </div>
+          </div>
         </nav>
         <div class="nav-actions">
           <button class="theme-toggle" type="button" aria-label="切换为深色模式" title="切换为深色模式"><span class="theme-toggle-icon" aria-hidden="true">☾</span></button>
