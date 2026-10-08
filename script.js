@@ -18,6 +18,7 @@ const lightboxCanvas = document.querySelector('.trade-lightbox-canvas');
 const lightboxImage = document.querySelector('.trade-lightbox-image');
 const lightboxClose = document.querySelector('.trade-lightbox-close');
 const lightboxTriggers = [...document.querySelectorAll('.trade-lightbox-trigger')];
+const inViewVideos = [...document.querySelectorAll('video[data-play-when-visible]')];
 const splitCaseMedia = window.matchMedia('(min-width: 737px)');
 let splitCaseLayoutState = null;
 
@@ -251,4 +252,38 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
+}
+
+function playInViewVideo(video) {
+  if (video.preload === 'none') {
+    video.preload = 'metadata';
+    video.load();
+  }
+
+  const playPromise = video.play();
+  playPromise?.catch(() => {});
+}
+
+if (inViewVideos.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (!(video instanceof HTMLVideoElement)) return;
+
+          if (entry.isIntersecting) {
+            playInViewVideo(video);
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { rootMargin: '240px 0px', threshold: 0.05 },
+    );
+
+    inViewVideos.forEach((video) => videoObserver.observe(video));
+  } else {
+    inViewVideos.forEach(playInViewVideo);
+  }
 }

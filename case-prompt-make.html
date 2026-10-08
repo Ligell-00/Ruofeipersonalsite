@@ -22,8 +22,8 @@
             </div>
           </div>
           <div class="nav-dropdown">
-            <a class="nav-link active" href="vibe-coding.html" aria-haspopup="true">vibe coding</a>
-            <div class="nav-dropdown-menu" aria-label="Vibe Coding">
+            <a class="nav-link active" href="vibe-coding.html" aria-haspopup="true">AI产品实践</a>
+            <div class="nav-dropdown-menu" aria-label="AI产品实践">
               <a class="nav-dropdown-link active" href="case-prompt-make.html" aria-current="page">PromptMake</a>
               <a class="nav-dropdown-link" href="case-name-agent.html">NameAgent</a>
             </div>
@@ -40,7 +40,7 @@
           <ul class="hamburger-ul">
             <li><a href="index.html"><h3>简历</h3></a></li>
             <li><a href="product-cases.html"><h3>产品案例</h3></a></li>
-            <li><a href="vibe-coding.html"><h3 class="index-li">vibe coding</h3></a></li>
+            <li><a href="vibe-coding.html"><h3 class="index-li">AI产品实践</h3></a></li>
           </ul>
         </nav>
       </aside>
@@ -57,7 +57,7 @@
                   <button class="prompt-make-real-tab" type="button" data-prompt-real-tab="豆包">豆包</button>
                 </div>
                 <div class="prompt-make-real-viewport">
-                  <video class="prompt-make-real-video" src="assets/prompt-make-real-gemini.mov" autoplay muted playsinline preload="metadata" aria-label="Prompt Make 在 Gemini 中的真实演示动效"></video>
+                  <video class="prompt-make-real-video" src="assets/prompt-make-real-gemini.mp4" data-play-when-visible muted playsinline preload="metadata" aria-label="Prompt Make 在 Gemini 中的真实演示动效"></video>
                   <span class="prompt-make-real-status">正在播放 Gemini 真实演示</span>
                 </div>
               </div>
@@ -80,14 +80,14 @@
             <div class="prompt-make-positioning-visual" aria-label="Prompt Make 产品界面与信息架构">
               <div class="prompt-make-interface-pair">
                 <figure class="prompt-make-ui-card prompt-make-ui-card--settings">
-                  <img src="assets/prompt-make-ui-settings.png" alt="Prompt Make 插件设置与应用场景选择界面" />
+                  <img src="assets/prompt-make-ui-settings.png" alt="Prompt Make 插件设置与应用场景选择界面" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="prompt-make-ui-card prompt-make-ui-card--result">
-                  <img src="assets/prompt-make-ui-result.png" alt="Prompt Make 优化提示词结果面板界面" />
+                  <img src="assets/prompt-make-ui-result.png" alt="Prompt Make 优化提示词结果面板界面" loading="lazy" decoding="async" />
                 </figure>
               </div>
               <figure class="trade-split-frame prompt-make-evidence prompt-make-evidence--architecture">
-                <img src="assets/prompt-make-positioning-value.png" alt="Prompt Make 让普通用户写出高质量 Prompt 的产品价值图" />
+                <img src="assets/prompt-make-positioning-value.png" alt="Prompt Make 让普通用户写出高质量 Prompt 的产品价值图" loading="lazy" decoding="async" />
               </figure>
             </div>
           </div>
@@ -112,7 +112,7 @@
           <div class="trade-split-visual trade-split-visual--sticky">
             <figure class="trade-split-frame prompt-make-evidence">
               <div class="prompt-make-edge-crop">
-                <img src="assets/prompt-make-workflow-v2.png" alt="Prompt Make 一键 Prompt 优化插件流程图，展示从输入想法到优化、对比、替换与发送的完整链路" width="1055" height="1491" />
+                <img src="assets/prompt-make-workflow-v2.png" alt="Prompt Make 一键 Prompt 优化插件流程图，展示从输入想法到优化、对比、替换与发送的完整链路" width="1055" height="1491" loading="lazy" decoding="async" />
               </div>
             </figure>
           </div>
@@ -137,7 +137,7 @@
         <section class="trade-split-section" id="ai-knowledge">
           <div class="trade-split-visual trade-split-visual--sticky">
             <figure class="trade-split-frame prompt-make-evidence">
-              <img src="assets/prompt-make-data-flow.png" alt="Prompt Make 技术架构与数据流图" />
+              <img src="assets/prompt-make-data-flow.png" alt="Prompt Make 技术架构与数据流图" loading="lazy" decoding="async" />
             </figure>
           </div>
           <article class="trade-split-copy">
@@ -165,7 +165,7 @@
         <section class="trade-split-section" id="features">
           <div class="trade-split-visual trade-split-visual--sticky">
             <figure class="trade-split-frame prompt-make-evidence">
-              <img src="assets/prompt-make-feature-highlights.png" alt="Prompt Make 核心功能亮点图" />
+              <img src="assets/prompt-make-feature-highlights.png" alt="Prompt Make 核心功能亮点图" loading="lazy" decoding="async" />
             </figure>
           </div>
           <article class="trade-split-copy">
@@ -186,7 +186,7 @@
         <section class="trade-split-section" id="summary">
           <div class="trade-split-visual trade-split-visual--sticky">
             <figure class="trade-split-frame prompt-make-evidence">
-              <img src="assets/prompt-make-summary-demo.png" alt="Prompt Make 在 Gemini 页面中的提示词优化演示图" />
+              <img src="assets/prompt-make-summary-demo.png" alt="Prompt Make 在 Gemini 页面中的提示词优化演示图" loading="lazy" decoding="async" />
             </figure>
           </div>
           <article class="trade-split-copy">
@@ -206,7 +206,7 @@
         if (!stage) return;
 
         const demos = [
-          { model: "Gemini", src: "assets/prompt-make-real-gemini.mov" },
+          { model: "Gemini", src: "assets/prompt-make-real-gemini.mp4" },
           { model: "chatGPT", src: "assets/prompt-make-real-chatgpt.mov" },
           { model: "deepseek", src: "assets/prompt-make-real-deepseek.mov" },
           { model: "豆包", src: "assets/prompt-make-real-doubao.mov" }
